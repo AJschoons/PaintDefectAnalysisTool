@@ -408,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CSE425Project/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425Project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CSE425Project/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425Project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,6 +494,7 @@
 				81D325C71BF2647C001CCD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81D325C81BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE425ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +503,7 @@
 				81D325CA1BF2647C001CCD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81D325CB1BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE425ProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +512,7 @@
 				81D325CD1BF2647C001CCD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
