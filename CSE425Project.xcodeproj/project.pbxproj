@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8147358E1BF2C26C00BF721C /* NewAuditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAuditTableViewController.swift */; };
 		81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259B1BF2647C001CCD1C /* AppDelegate.swift */; };
 		81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259D1BF2647C001CCD1C /* CSE425Project.xcdatamodeld */; };
 		81D325A11BF2647C001CCD1C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A01BF2647C001CCD1C /* MasterViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8147358D1BF2C26C00BF721C /* NewAuditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAuditTableViewController.swift; sourceTree = "<group>"; };
 		81D325981BF2647C001CCD1C /* CSE425Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSE425Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3259B1BF2647C001CCD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3259E1BF2647C001CCD1C /* CSE425Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSE425Project.xcdatamodel; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				81D325A01BF2647C001CCD1C /* MasterViewController.swift */,
 				81D325A21BF2647C001CCD1C /* DetailViewController.swift */,
 				81D325A41BF2647C001CCD1C /* Main.storyboard */,
+				8147358D1BF2C26C00BF721C /* NewAuditTableViewController.swift */,
 				81D325A71BF2647C001CCD1C /* Assets.xcassets */,
 				81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */,
 				81D325AC1BF2647C001CCD1C /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8147358E1BF2C26C00BF721C /* NewAuditTableViewController.swift in Sources */,
 				81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */,
 				81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */,
 				81D325A11BF2647C001CCD1C /* MasterViewController.swift in Sources */,

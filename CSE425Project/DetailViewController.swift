@@ -12,7 +12,6 @@ class AuditsDetailViewController: UIViewController {
 
   @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
   var detailItem: AnyObject? {
     didSet {
         // Update the view.
@@ -39,7 +38,4 @@ class AuditsDetailViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-
 }
-
