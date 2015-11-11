@@ -447,7 +447,7 @@
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
             <objects>
-                <viewController id="vo7-dz-3eY" sceneMemberID="viewController">
+                <viewController id="vo7-dz-3eY" customClass="CarSampleViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yy8-fy-mpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="aZQ-Rp-0zX"/>
@@ -455,11 +455,139 @@
                     <view key="view" contentMode="scaleToFill" id="6Zh-Zx-Nj1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d46-7M-st3" userLabel="Car Select">
+                                <rect key="frame" x="0.0" y="64" width="768" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RW-ob-zaE" userLabel="Side Select">
+                                        <rect key="frame" x="15" y="332" width="738" height="43"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-WO-Wrr">
+                                                <rect key="frame" x="0.0" y="0.0" width="738" height="29"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="an8-Vt-X6e"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Left"/>
+                                                    <segment title="Top"/>
+                                                    <segment title="Right"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="carSideSegmentedControlIndexDidChange:" destination="vo7-dz-3eY" eventType="valueChanged" id="Xvs-P8-uh3"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="Tif-WO-Wrr" firstAttribute="top" secondItem="6RW-ob-zaE" secondAttribute="top" id="31c-ZQ-KMP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tif-WO-Wrr" secondAttribute="trailing" id="LzA-BI-oHK"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tif-WO-Wrr" secondAttribute="bottom" constant="15" id="jhH-1N-Bbt"/>
+                                            <constraint firstItem="Tif-WO-Wrr" firstAttribute="leading" secondItem="6RW-ob-zaE" secondAttribute="leading" id="jho-gb-Bfr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-9e-Lnl" userLabel="Car Images">
+                                        <rect key="frame" x="15" y="15" width="738" height="320"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLV-ul-WqB" userLabel="Images">
+                                                <rect key="frame" x="0.0" y="0.0" width="738" height="320"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carLeft" translatesAutoresizingMaskIntoConstraints="NO" id="cFl-OM-4iC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="320"/>
+                                                        <animations/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="320" id="ZHQ-Mo-l9P"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carTop" translatesAutoresizingMaskIntoConstraints="NO" id="KDl-7H-qh9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="320"/>
+                                                        <animations/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="320" id="n2z-3L-ami"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carRight" translatesAutoresizingMaskIntoConstraints="NO" id="Uyh-mg-Lc9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="320"/>
+                                                        <animations/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="320" id="niN-O9-BLo"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Uyh-mg-Lc9" firstAttribute="leading" secondItem="qLV-ul-WqB" secondAttribute="leading" id="F2x-vF-Bea"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cFl-OM-4iC" secondAttribute="bottom" id="cvJ-hT-k9C"/>
+                                                    <constraint firstItem="cFl-OM-4iC" firstAttribute="leading" secondItem="qLV-ul-WqB" secondAttribute="leading" id="d0S-3R-GeU"/>
+                                                    <constraint firstItem="cFl-OM-4iC" firstAttribute="top" secondItem="qLV-ul-WqB" secondAttribute="top" id="eUi-cg-OCR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KDl-7H-qh9" secondAttribute="bottom" id="iYV-Jq-mgb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Uyh-mg-Lc9" secondAttribute="bottom" id="m82-RI-Wve"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cFl-OM-4iC" secondAttribute="trailing" id="n6D-VW-jSt"/>
+                                                    <constraint firstItem="KDl-7H-qh9" firstAttribute="top" secondItem="qLV-ul-WqB" secondAttribute="top" id="nOO-PX-9n6"/>
+                                                    <constraint firstItem="Uyh-mg-Lc9" firstAttribute="top" secondItem="qLV-ul-WqB" secondAttribute="top" id="npu-00-D9W"/>
+                                                    <constraint firstItem="KDl-7H-qh9" firstAttribute="leading" secondItem="qLV-ul-WqB" secondAttribute="leading" id="om0-A6-kcW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Uyh-mg-Lc9" secondAttribute="trailing" id="rh6-n3-hGf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KDl-7H-qh9" secondAttribute="trailing" id="yvC-3W-f5c"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-zr-14X" userLabel="Overlay">
+                                                <rect key="frame" x="0.0" y="310" width="738" height="10"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="iLZ-uD-ezM"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="hqG-zr-14X" firstAttribute="leading" secondItem="ugd-9e-Lnl" secondAttribute="leading" id="LJ7-6J-cRp"/>
+                                            <constraint firstAttribute="bottom" secondItem="hqG-zr-14X" secondAttribute="bottom" id="TGE-EV-asI"/>
+                                            <constraint firstItem="qLV-ul-WqB" firstAttribute="top" secondItem="ugd-9e-Lnl" secondAttribute="top" id="ZZQ-11-WaT"/>
+                                            <constraint firstAttribute="trailing" secondItem="qLV-ul-WqB" secondAttribute="trailing" id="d6N-KV-CD9"/>
+                                            <constraint firstAttribute="trailing" secondItem="hqG-zr-14X" secondAttribute="trailing" id="ddA-cS-d1I"/>
+                                            <constraint firstAttribute="height" constant="320" id="p0t-N5-TFD"/>
+                                            <constraint firstItem="qLV-ul-WqB" firstAttribute="leading" secondItem="ugd-9e-Lnl" secondAttribute="leading" id="qP8-Wg-2ga"/>
+                                            <constraint firstAttribute="bottom" secondItem="qLV-ul-WqB" secondAttribute="bottom" id="qiw-Wk-UAn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="ugd-9e-Lnl" firstAttribute="leading" secondItem="d46-7M-st3" secondAttribute="leading" constant="15" id="5Dd-3e-Tg7"/>
+                                    <constraint firstItem="6RW-ob-zaE" firstAttribute="top" secondItem="ugd-9e-Lnl" secondAttribute="bottom" constant="-3" id="Kgq-Ri-QZ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ugd-9e-Lnl" secondAttribute="trailing" constant="15" id="QgM-Pj-8eI"/>
+                                    <constraint firstItem="6RW-ob-zaE" firstAttribute="leading" secondItem="ugd-9e-Lnl" secondAttribute="leading" id="bT3-7w-Dif"/>
+                                    <constraint firstItem="6RW-ob-zaE" firstAttribute="trailing" secondItem="ugd-9e-Lnl" secondAttribute="trailing" id="exu-mW-Jtn"/>
+                                    <constraint firstItem="ugd-9e-Lnl" firstAttribute="top" secondItem="d46-7M-st3" secondAttribute="top" constant="15" id="f8L-yn-hD3"/>
+                                    <constraint firstAttribute="bottom" secondItem="6RW-ob-zaE" secondAttribute="bottom" id="iCZ-er-euH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d46-7M-st3" secondAttribute="trailing" id="CeB-As-vDk"/>
+                            <constraint firstItem="d46-7M-st3" firstAttribute="top" secondItem="yy8-fy-mpQ" secondAttribute="bottom" id="LEy-to-vLI"/>
+                            <constraint firstItem="d46-7M-st3" firstAttribute="leading" secondItem="6Zh-Zx-Nj1" secondAttribute="leading" id="fwC-2k-RMR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Automotive Sample" id="zVG-zM-ZmS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="carLeftImageView" destination="cFl-OM-4iC" id="ln3-dR-cWV"/>
+                        <outlet property="carRightImageView" destination="Uyh-mg-Lc9" id="zaM-eV-ah2"/>
+                        <outlet property="carSideSegmentedControl" destination="Tif-WO-Wrr" id="tSL-W9-AqM"/>
+                        <outlet property="carTopImageView" destination="KDl-7H-qh9" id="Dia-cB-IML"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xi3-s3-rVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -979,6 +1107,11 @@
             <point key="canvasLocation" x="90" y="877"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="carLeft" width="575" height="250"/>
+        <image name="carRight" width="575" height="250"/>
+        <image name="carTop" width="575" height="250"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1Ba-TG-8FC"/>
     </inferredMetricsTieBreakers>
