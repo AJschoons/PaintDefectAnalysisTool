@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8147358E1BF2C26C00BF721C /* NewAuditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAuditTableViewController.swift */; };
+		8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */; };
+		814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */; };
+		814735921BF2DF4B00BF721C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735911BF2DF4B00BF721C /* TableViewController.swift */; };
 		81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259B1BF2647C001CCD1C /* AppDelegate.swift */; };
 		81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259D1BF2647C001CCD1C /* CSE425Project.xcdatamodeld */; };
-		81D325A11BF2647C001CCD1C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A01BF2647C001CCD1C /* MasterViewController.swift */; };
-		81D325A31BF2647C001CCD1C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A21BF2647C001CCD1C /* DetailViewController.swift */; };
+		81D325A31BF2647C001CCD1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A21BF2647C001CCD1C /* HomeViewController.swift */; };
 		81D325A61BF2647C001CCD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D325A41BF2647C001CCD1C /* Main.storyboard */; };
 		81D325A81BF2647C001CCD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D325A71BF2647C001CCD1C /* Assets.xcassets */; };
 		81D325AB1BF2647C001CCD1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */; };
@@ -37,12 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8147358D1BF2C26C00BF721C /* NewAuditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAuditTableViewController.swift; sourceTree = "<group>"; };
+		8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnalysisTableViewController.swift; sourceTree = "<group>"; };
+		8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousAnalysisTableViewController.swift; sourceTree = "<group>"; };
+		814735911BF2DF4B00BF721C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		81D325981BF2647C001CCD1C /* CSE425Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSE425Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3259B1BF2647C001CCD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3259E1BF2647C001CCD1C /* CSE425Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSE425Project.xcdatamodel; sourceTree = "<group>"; };
-		81D325A01BF2647C001CCD1C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		81D325A21BF2647C001CCD1C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		81D325A21BF2647C001CCD1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		81D325A51BF2647C001CCD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81D325A71BF2647C001CCD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D325AA1BF2647C001CCD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,10 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				81D3259B1BF2647C001CCD1C /* AppDelegate.swift */,
-				81D325A01BF2647C001CCD1C /* MasterViewController.swift */,
-				81D325A21BF2647C001CCD1C /* DetailViewController.swift */,
+				81D325A21BF2647C001CCD1C /* HomeViewController.swift */,
 				81D325A41BF2647C001CCD1C /* Main.storyboard */,
-				8147358D1BF2C26C00BF721C /* NewAuditTableViewController.swift */,
+				8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */,
+				8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */,
+				814735911BF2DF4B00BF721C /* TableViewController.swift */,
 				81D325A71BF2647C001CCD1C /* Assets.xcassets */,
 				81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */,
 				81D325AC1BF2647C001CCD1C /* Info.plist */,
@@ -265,11 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8147358E1BF2C26C00BF721C /* NewAuditTableViewController.swift in Sources */,
+				8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */,
+				814735921BF2DF4B00BF721C /* TableViewController.swift in Sources */,
 				81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */,
+				814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */,
 				81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */,
-				81D325A11BF2647C001CCD1C /* MasterViewController.swift in Sources */,
-				81D325A31BF2647C001CCD1C /* DetailViewController.swift in Sources */,
+				81D325A31BF2647C001CCD1C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewAuditTableViewController: UITableViewController {
+class NewAnalysisTableViewController: UITableViewController {
 
     var selectedCellIndexPath: NSIndexPath?
     
@@ -17,7 +17,7 @@ class NewAuditTableViewController: UITableViewController {
     }
 }
 
-extension NewAuditTableViewController {
+extension NewAnalysisTableViewController {
     // MARK: - Table view delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
