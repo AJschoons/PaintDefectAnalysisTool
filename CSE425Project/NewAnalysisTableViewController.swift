@@ -38,12 +38,12 @@ extension NewAnalysisTableViewController {
         selectedCellIndexPath = nil
     }
     
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return indexPath.row != 0 // first row is a title, don't select it
+    }
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
-    }
-    
-    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return indexPath.row != 0 // first row is a title, don't select it
     }
 }

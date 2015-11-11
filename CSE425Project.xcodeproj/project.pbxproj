@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */; };
 		814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */; };
-		814735921BF2DF4B00BF721C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735911BF2DF4B00BF721C /* TableViewController.swift */; };
 		814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735931BF31C4C00BF721C /* CarSampleViewController.swift */; };
+		814735961BF39CB200BF721C /* AnalysisSamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */; };
+		8147359A1BF3A08500BF721C /* MarkedDefectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */; };
 		81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259B1BF2647C001CCD1C /* AppDelegate.swift */; };
 		81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259D1BF2647C001CCD1C /* CSE425Project.xcdatamodeld */; };
 		81D325A31BF2647C001CCD1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A21BF2647C001CCD1C /* HomeViewController.swift */; };
@@ -41,8 +42,9 @@
 /* Begin PBXFileReference section */
 		8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousAnalysisTableViewController.swift; sourceTree = "<group>"; };
-		814735911BF2DF4B00BF721C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		814735931BF31C4C00BF721C /* CarSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarSampleViewController.swift; sourceTree = "<group>"; };
+		814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisSamplesTableViewController.swift; sourceTree = "<group>"; };
+		814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkedDefectsTableViewController.swift; sourceTree = "<group>"; };
 		81D325981BF2647C001CCD1C /* CSE425Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSE425Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3259B1BF2647C001CCD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3259E1BF2647C001CCD1C /* CSE425Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSE425Project.xcdatamodel; sourceTree = "<group>"; };
@@ -113,7 +115,8 @@
 				814735931BF31C4C00BF721C /* CarSampleViewController.swift */,
 				8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */,
 				8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */,
-				814735911BF2DF4B00BF721C /* TableViewController.swift */,
+				814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */,
+				814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */,
 				81D325A71BF2647C001CCD1C /* Assets.xcassets */,
 				81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */,
 				81D325AC1BF2647C001CCD1C /* Info.plist */,
@@ -273,7 +276,8 @@
 			files = (
 				8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */,
 				814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */,
-				814735921BF2DF4B00BF721C /* TableViewController.swift in Sources */,
+				8147359A1BF3A08500BF721C /* MarkedDefectsTableViewController.swift in Sources */,
+				814735961BF39CB200BF721C /* AnalysisSamplesTableViewController.swift in Sources */,
 				81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */,
 				814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */,
 				81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */,

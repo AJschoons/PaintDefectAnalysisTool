@@ -1,33 +1,33 @@
 //
-//  PreviousAuditTableViewController.swift
+//  MarkedDefectsTableViewController.swift
 //  CSE425Project
 //
-//  Created by adam on 11/10/15.
+//  Created by adam on 11/11/15.
 //  Copyright © 2015 Adam Schoonmaker. All rights reserved.
 //
 
 import UIKit
 
-class PreviousAnalysisTableViewController: UITableViewController {
-
+class MarkedDefectsTableViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-extension PreviousAnalysisTableViewController {
+extension MarkedDefectsTableViewController {
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 23
     }
 }
 
-extension PreviousAnalysisTableViewController {
+extension MarkedDefectsTableViewController {
     // MARK: - Table view delegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("previousAnalysis", forIndexPath: indexPath)
-        cell.textLabel?.text = "Previous Analysis \(indexPath.row)"
+        let cell = tableView.dequeueReusableCellWithIdentifier("markedDefectCell", forIndexPath: indexPath)
+        cell.textLabel?.text = "Marked Defect \(indexPath.row)"
         return cell;
     }
     
