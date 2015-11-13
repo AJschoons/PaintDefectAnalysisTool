@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-               BuildableName = "CSE425Project.app"
+               BuildableName = "CSE435Project.app"
                BlueprintName = "CSE425Project"
                ReferencedContainer = "container:CSE425Project.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325B01BF2647C001CCD1C"
-               BuildableName = "CSE425ProjectTests.xctest"
+               BuildableName = "CSE425Project.xctest"
                BlueprintName = "CSE425ProjectTests"
                ReferencedContainer = "container:CSE425Project.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325BB1BF2647C001CCD1C"
-               BuildableName = "CSE425ProjectUITests.xctest"
+               BuildableName = "CSE425Project.xctest"
                BlueprintName = "CSE425ProjectUITests"
                ReferencedContainer = "container:CSE425Project.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-            BuildableName = "CSE425Project.app"
+            BuildableName = "CSE435Project.app"
             BlueprintName = "CSE425Project"
             ReferencedContainer = "container:CSE425Project.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-            BuildableName = "CSE425Project.app"
+            BuildableName = "CSE435Project.app"
             BlueprintName = "CSE425Project"
             ReferencedContainer = "container:CSE425Project.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-            BuildableName = "CSE425Project.app"
+            BuildableName = "CSE435Project.app"
             BlueprintName = "CSE425Project"
             ReferencedContainer = "container:CSE425Project.xcodeproj">
          </BuildableReference>

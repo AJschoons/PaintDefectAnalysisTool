@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */; };
 		8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */; };
 		814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */; };
 		814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735931BF31C4C00BF721C /* CarSampleViewController.swift */; };
 		814735961BF39CB200BF721C /* AnalysisSamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */; };
 		8147359A1BF3A08500BF721C /* MarkedDefectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */; };
+		8147359C1BF43AD400BF721C /* CarModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147359B1BF43AD400BF721C /* CarModelTableViewController.swift */; };
+		814735A01BF4FE7C00BF721C /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147359F1BF4FE7C00BF721C /* Analysis.swift */; };
+		814735A21BF50D2000BF721C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735A11BF50D2000BF721C /* Factory.swift */; };
+		814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735A81BF53F7700BF721C /* FactoryTableViewController.swift */; };
+		814735AB1BF5785C00BF721C /* CheckpointTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735AA1BF5785C00BF721C /* CheckpointTableViewController.swift */; };
+		814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735AC1BF57AF000BF721C /* ShiftTableViewController.swift */; };
 		81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259B1BF2647C001CCD1C /* AppDelegate.swift */; };
 		81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259D1BF2647C001CCD1C /* CSE425Project.xcdatamodeld */; };
 		81D325A31BF2647C001CCD1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A21BF2647C001CCD1C /* HomeViewController.swift */; };
@@ -40,11 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		814735931BF31C4C00BF721C /* CarSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarSampleViewController.swift; sourceTree = "<group>"; };
 		814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisSamplesTableViewController.swift; sourceTree = "<group>"; };
 		814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkedDefectsTableViewController.swift; sourceTree = "<group>"; };
+		8147359B1BF43AD400BF721C /* CarModelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelTableViewController.swift; sourceTree = "<group>"; };
+		8147359F1BF4FE7C00BF721C /* Analysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
+		814735A11BF50D2000BF721C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		814735A81BF53F7700BF721C /* FactoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryTableViewController.swift; sourceTree = "<group>"; };
+		814735AA1BF5785C00BF721C /* CheckpointTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckpointTableViewController.swift; sourceTree = "<group>"; };
+		814735AC1BF57AF000BF721C /* ShiftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTableViewController.swift; sourceTree = "<group>"; };
 		81D325981BF2647C001CCD1C /* CSE425Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSE425Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3259B1BF2647C001CCD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3259E1BF2647C001CCD1C /* CSE425Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSE425Project.xcdatamodel; sourceTree = "<group>"; };
@@ -53,10 +67,10 @@
 		81D325A71BF2647C001CCD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D325AA1BF2647C001CCD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D325AC1BF2647C001CCD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D325B11BF2647C001CCD1C /* CSE425ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE425ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D325B11BF2647C001CCD1C /* CSE425Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE425Project.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D325B51BF2647C001CCD1C /* CSE425ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE425ProjectTests.swift; sourceTree = "<group>"; };
 		81D325B71BF2647C001CCD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D325BC1BF2647C001CCD1C /* CSE425ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE425ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D325BC1BF2647C001CCD1C /* CSE425Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE425Project.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D325C01BF2647C001CCD1C /* CSE425ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE425ProjectUITests.swift; sourceTree = "<group>"; };
 		81D325C21BF2647C001CCD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +100,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		814735A31BF5366E00BF721C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				81D325A21BF2647C001CCD1C /* HomeViewController.swift */,
+				8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */,
+				8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */,
+				814735A81BF53F7700BF721C /* FactoryTableViewController.swift */,
+				814735AA1BF5785C00BF721C /* CheckpointTableViewController.swift */,
+				814735AC1BF57AF000BF721C /* ShiftTableViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		814735A41BF536AC00BF721C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8147359F1BF4FE7C00BF721C /* Analysis.swift */,
+				814735A11BF50D2000BF721C /* Factory.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		814735A51BF536BB00BF721C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		814735A61BF536F200BF721C /* Analysis Samples */ = {
+			isa = PBXGroup;
+			children = (
+				814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */,
+			);
+			name = "Analysis Samples";
+			sourceTree = "<group>";
+		};
+		814735A71BF5372100BF721C /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				8147359B1BF43AD400BF721C /* CarModelTableViewController.swift */,
+				814735931BF31C4C00BF721C /* CarSampleViewController.swift */,
+				814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
 		81D3258F1BF2647C001CCD1C = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				81D325981BF2647C001CCD1C /* CSE425Project.app */,
-				81D325B11BF2647C001CCD1C /* CSE425ProjectTests.xctest */,
-				81D325BC1BF2647C001CCD1C /* CSE425ProjectUITests.xctest */,
+				81D325B11BF2647C001CCD1C /* CSE425Project.xctest */,
+				81D325BC1BF2647C001CCD1C /* CSE425Project.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,13 +171,13 @@
 			isa = PBXGroup;
 			children = (
 				81D3259B1BF2647C001CCD1C /* AppDelegate.swift */,
-				81D325A21BF2647C001CCD1C /* HomeViewController.swift */,
+				8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */,
 				81D325A41BF2647C001CCD1C /* Main.storyboard */,
-				814735931BF31C4C00BF721C /* CarSampleViewController.swift */,
-				8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */,
-				8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */,
-				814735951BF39CB200BF721C /* AnalysisSamplesTableViewController.swift */,
-				814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */,
+				814735A51BF536BB00BF721C /* Managers */,
+				814735A41BF536AC00BF721C /* Models */,
+				814735A31BF5366E00BF721C /* Home */,
+				814735A61BF536F200BF721C /* Analysis Samples */,
+				814735A71BF5372100BF721C /* Sample */,
 				81D325A71BF2647C001CCD1C /* Assets.xcassets */,
 				81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */,
 				81D325AC1BF2647C001CCD1C /* Info.plist */,
@@ -178,7 +239,7 @@
 			);
 			name = CSE425ProjectTests;
 			productName = CSE425ProjectTests;
-			productReference = 81D325B11BF2647C001CCD1C /* CSE425ProjectTests.xctest */;
+			productReference = 81D325B11BF2647C001CCD1C /* CSE425Project.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		81D325BB1BF2647C001CCD1C /* CSE425ProjectUITests */ = {
@@ -196,7 +257,7 @@
 			);
 			name = CSE425ProjectUITests;
 			productName = CSE425ProjectUITests;
-			productReference = 81D325BC1BF2647C001CCD1C /* CSE425ProjectUITests.xctest */;
+			productReference = 81D325BC1BF2647C001CCD1C /* CSE425Project.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -275,13 +336,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */,
+				814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */,
+				814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */,
 				814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */,
 				8147359A1BF3A08500BF721C /* MarkedDefectsTableViewController.swift in Sources */,
+				814735A01BF4FE7C00BF721C /* Analysis.swift in Sources */,
+				8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */,
 				814735961BF39CB200BF721C /* AnalysisSamplesTableViewController.swift in Sources */,
+				8147359C1BF43AD400BF721C /* CarModelTableViewController.swift in Sources */,
 				81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */,
+				814735A21BF50D2000BF721C /* Factory.swift in Sources */,
 				814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */,
 				81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */,
 				81D325A31BF2647C001CCD1C /* HomeViewController.swift in Sources */,
+				814735AB1BF5785C00BF721C /* CheckpointTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +491,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CSE425Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425Project;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSE425Project;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -435,11 +505,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CSE425Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425Project;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSE425Project;
 			};
 			name = Release;
 		};
@@ -450,7 +521,7 @@
 				INFOPLIST_FILE = CSE425ProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425ProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSE425Project;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSE425Project.app/CSE425Project";
 			};
 			name = Debug;
@@ -462,7 +533,7 @@
 				INFOPLIST_FILE = CSE425ProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425ProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSE425Project;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSE425Project.app/CSE425Project";
 			};
 			name = Release;
@@ -473,7 +544,7 @@
 				INFOPLIST_FILE = CSE425ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425ProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSE425Project;
 				TEST_TARGET_NAME = CSE425Project;
 				USES_XCTRUNNER = YES;
 			};
@@ -485,7 +556,7 @@
 				INFOPLIST_FILE = CSE425ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425ProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSE425Project;
 				TEST_TARGET_NAME = CSE425Project;
 				USES_XCTRUNNER = YES;
 			};

@@ -10,15 +10,19 @@ import UIKit
 
 class PreviousAnalysisTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var analyses = [Analysis]()
+    
+    override func viewWillAppear(animated: Bool) {
+        // Reload analyses each time the table appears
+        analyses = Analysis.fetchAnalyses()
+        tableView.reloadData()
     }
 }
 
 extension PreviousAnalysisTableViewController {
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 23
+        return analyses.count
     }
 }
 
@@ -27,7 +31,7 @@ extension PreviousAnalysisTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("previousAnalysis", forIndexPath: indexPath)
-        cell.textLabel?.text = "Previous Analysis \(indexPath.row)"
+        cell.textLabel?.text = analyses[indexPath.row].toString()
         return cell;
     }
     

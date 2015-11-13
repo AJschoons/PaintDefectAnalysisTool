@@ -12,8 +12,14 @@ class NewAnalysisTableViewController: UITableViewController {
 
     var selectedCellIndexPath: NSIndexPath?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        updateCellSelection()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        // Clears out the selection
+        updateCellSelection()
     }
 }
 
@@ -21,20 +27,11 @@ extension NewAnalysisTableViewController {
     // MARK: - Table view delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath == selectedCellIndexPath {
-            performDeselectionActionsForRowAtIndexPath(indexPath)
-        } else {
-            tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
-            selectedCellIndexPath = indexPath
-        }
+        selectedCellIndexPath = indexPath
+        updateCellSelection()
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        performDeselectionActionsForRowAtIndexPath(indexPath)
-    }
-    
-    func performDeselectionActionsForRowAtIndexPath(indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
         selectedCellIndexPath = nil
     }
     
@@ -45,5 +42,15 @@ extension NewAnalysisTableViewController {
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
+    }
+    
+    // gives the selected cell a checkmark
+    private func updateCellSelection() {
+        for var row = 0; row < tableView.numberOfRowsInSection(0); ++row {
+            let indexPath = NSIndexPath(forRow: row, inSection: 0)
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            let accessoryType: UITableViewCellAccessoryType = (indexPath == selectedCellIndexPath) ? .Checkmark : .None
+            cell?.accessoryType = accessoryType
+        }
     }
 }
