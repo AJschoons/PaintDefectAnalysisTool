@@ -514,7 +514,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkK-Wi-eIu" userLabel="Sample Info">
-                                <rect key="frame" x="15" y="54" width="738" height="60"/>
+                                <rect key="frame" x="15" y="34" width="738" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-Nd-I0d" userLabel="Visible Region">
                                         <rect key="frame" x="0.0" y="10" width="738" height="50"/>
@@ -523,7 +523,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="246" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rfo-hH-6hf" userLabel="Done with side">
-                                                        <rect key="frame" x="55" y="9.5" width="136.5" height="31"/>
+                                                        <rect key="frame" x="55" y="9" width="136.5" height="31"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Side:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iH6-7O-CeA">
                                                                 <rect key="frame" x="5" y="5" width="72.5" height="20.5"/>
@@ -533,7 +533,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-za-k9N">
-                                                                <rect key="frame" x="82.5" y="0.0" width="51" height="31"/>
+                                                                <rect key="frame" x="82" y="0.0" width="51" height="31"/>
                                                                 <animations/>
                                                             </switch>
                                                         </subviews>
@@ -593,14 +593,14 @@
                                                         <rect key="frame" x="49" y="10" width="147" height="31"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Side:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zh-Sz-b8k">
-                                                                <rect key="frame" x="5.5" y="5" width="83" height="20.5"/>
+                                                                <rect key="frame" x="5" y="5" width="83" height="20.5"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PXn-Og-Koo">
-                                                                <rect key="frame" x="93.5" y="0.0" width="51" height="31"/>
+                                                                <rect key="frame" x="93" y="0.0" width="51" height="31"/>
                                                                 <animations/>
                                                             </switch>
                                                         </subviews>
@@ -656,7 +656,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-Yh-tAh" userLabel="Mark Defect Area">
-                                <rect key="frame" x="15" y="129" width="738" height="650"/>
+                                <rect key="frame" x="15" y="109" width="738" height="650"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d46-7M-st3" userLabel="Car Select">
                                         <rect key="frame" x="0.0" y="0.0" width="738" height="360"/>
@@ -966,10 +966,31 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCL-m6-Kcu" userLabel="Defect Table">
-                                <rect key="frame" x="15" y="794" width="738" height="171"/>
+                                <rect key="frame" x="15" y="774" width="738" height="191"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZZ-v7-HBC" userLabel="Header">
+                                        <rect key="frame" x="0.0" y="0.0" width="738" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marked Defects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-wb-z5f">
+                                                <rect key="frame" x="0.0" y="0.0" width="738" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Oxa-wb-z5f" secondAttribute="bottom" id="7IR-rj-Azg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Oxa-wb-z5f" secondAttribute="trailing" id="ER4-Dl-oFV"/>
+                                            <constraint firstAttribute="height" constant="30" id="Gqd-wT-SFj"/>
+                                            <constraint firstItem="Oxa-wb-z5f" firstAttribute="top" secondItem="yZZ-v7-HBC" secondAttribute="top" id="N1M-Bg-adi"/>
+                                            <constraint firstItem="Oxa-wb-z5f" firstAttribute="leading" secondItem="yZZ-v7-HBC" secondAttribute="leading" id="zen-po-GTX"/>
+                                        </constraints>
+                                    </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-QA-XMb">
-                                        <rect key="frame" x="0.0" y="0.0" width="738" height="171"/>
+                                        <rect key="frame" x="0.0" y="30" width="738" height="161"/>
                                         <animations/>
                                         <connections>
                                             <segue destination="jEI-BO-IFQ" kind="embed" id="oCs-6d-6ww"/>
@@ -980,9 +1001,12 @@
                                 <color key="backgroundColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZCA-QA-XMb" secondAttribute="bottom" id="CRJ-JU-A23"/>
+                                    <constraint firstItem="ZCA-QA-XMb" firstAttribute="top" secondItem="yZZ-v7-HBC" secondAttribute="bottom" id="Mjz-xT-JLL"/>
+                                    <constraint firstItem="yZZ-v7-HBC" firstAttribute="leading" secondItem="GCL-m6-Kcu" secondAttribute="leading" id="N1C-f6-CIR"/>
                                     <constraint firstAttribute="trailing" secondItem="ZCA-QA-XMb" secondAttribute="trailing" id="VMZ-2P-HsK"/>
+                                    <constraint firstItem="yZZ-v7-HBC" firstAttribute="top" secondItem="GCL-m6-Kcu" secondAttribute="top" id="WAQ-ue-uDY"/>
                                     <constraint firstItem="ZCA-QA-XMb" firstAttribute="leading" secondItem="GCL-m6-Kcu" secondAttribute="leading" id="ovj-Bi-ky4"/>
-                                    <constraint firstItem="ZCA-QA-XMb" firstAttribute="top" secondItem="GCL-m6-Kcu" secondAttribute="top" id="pjc-Av-0XB"/>
+                                    <constraint firstAttribute="trailing" secondItem="yZZ-v7-HBC" secondAttribute="trailing" id="vOy-tB-VuF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1007,7 +1031,9 @@
                             <constraint firstItem="aAb-Yh-tAh" firstAttribute="leading" secondItem="6Zh-Zx-Nj1" secondAttribute="leading" constant="15" id="mjA-w7-Olu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Automotive Sample" id="zVG-zM-ZmS"/>
+                    <navigationItem key="navigationItem" title="Automotive Sample" id="zVG-zM-ZmS">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="fxi-6w-ll8"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="carLeftImageView" destination="cFl-OM-4iC" id="ln3-dR-cWV"/>
@@ -1026,34 +1052,13 @@
             <objects>
                 <tableViewController id="jEI-BO-IFQ" customClass="MarkedDefectsTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3uk-wm-CAq">
-                        <rect key="frame" x="0.0" y="0.0" width="738" height="171"/>
+                        <rect key="frame" x="0.0" y="0.0" width="738" height="161"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="fqV-IF-tOZ" userLabel="Header">
-                            <rect key="frame" x="0.0" y="0.0" width="738" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marked Defects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umy-tD-Ziv">
-                                    <rect key="frame" x="0.0" y="0.0" width="738" height="30"/>
-                                    <animations/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <animations/>
-                            <color key="backgroundColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstItem="Umy-tD-Ziv" firstAttribute="top" secondItem="fqV-IF-tOZ" secondAttribute="top" id="BZb-I9-MII"/>
-                                <constraint firstItem="Umy-tD-Ziv" firstAttribute="leading" secondItem="fqV-IF-tOZ" secondAttribute="leading" id="Vsz-AR-Sb3"/>
-                                <constraint firstAttribute="bottom" secondItem="Umy-tD-Ziv" secondAttribute="bottom" id="XQu-Qp-SHk"/>
-                                <constraint firstAttribute="trailing" secondItem="Umy-tD-Ziv" secondAttribute="trailing" id="fws-9R-7cu"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="markedDefectCell" textLabel="lip-qF-jsw" style="IBUITableViewCellStyleDefault" id="eHW-02-qOZ">
-                                <rect key="frame" x="0.0" y="58" width="738" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="738" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHW-02-qOZ" id="Fe5-wf-jd4">
                                     <rect key="frame" x="0.0" y="0.0" width="738" height="43.5"/>
