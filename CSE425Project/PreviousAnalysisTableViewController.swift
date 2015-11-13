@@ -21,6 +21,27 @@ class PreviousAnalysisTableViewController: UITableViewController {
 
 extension PreviousAnalysisTableViewController {
     // MARK: - Table view data source
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        let hasData = analyses.count > 0
+        
+        var numberOfSections = 0
+        if hasData {
+            numberOfSections = 1
+            tableView.separatorStyle = .SingleLine
+            tableView.backgroundView = nil
+        } else {
+            let noDataLabel = UILabel(frame: CGRectMake(0, 0, tableView.bounds.size.width, tableView.bounds.size.height))
+            noDataLabel.text = "No Analyses To Show"
+            noDataLabel.textAlignment = .Center
+            noDataLabel.font = UIFont.systemFontOfSize(12)
+            
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .None
+        }
+
+        return numberOfSections;
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return analyses.count
     }
