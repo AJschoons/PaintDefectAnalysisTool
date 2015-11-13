@@ -11,7 +11,7 @@
         <!--Previous Analysis Table View Controller-->
         <scene sceneID="P4Q-QO-yZR">
             <objects>
-                <tableViewController id="Etb-MX-z5k" customClass="PreviousAnalysisTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Etb-MX-z5k" customClass="PreviousAnalysisTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vks-eH-gfU">
                         <rect key="frame" x="0.0" y="0.0" width="738" height="334.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="zSu-RN-CDm" kind="show" id="Uy0-OK-hwC"/>
+                                    <segue destination="zSu-RN-CDm" kind="show" identifier="previousAnalysis" id="Uy0-OK-hwC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
         <!--Home-->
         <scene sceneID="Qeo-R0-xPO">
             <objects>
-                <viewController title="Home" id="4I9-on-Gvh" customClass="HomeViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="4I9-on-Gvh" customClass="HomeViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SDw-TX-tJI"/>
                         <viewControllerLayoutGuide type="bottom" id="ZbR-g8-ED7"/>
@@ -456,7 +456,7 @@
         <!--Car Model Table View Controller-->
         <scene sceneID="VTN-wk-HkF">
             <objects>
-                <tableViewController id="TJd-7e-sqr" customClass="CarModelTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TJd-7e-sqr" customClass="CarModelTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oV4-SN-p6C">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -504,7 +504,7 @@
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
             <objects>
-                <viewController id="vo7-dz-3eY" customClass="CarSampleViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vo7-dz-3eY" customClass="CarSampleViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yy8-fy-mpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="aZQ-Rp-0zX"/>
@@ -1024,7 +1024,7 @@
         <!--Marked Defects Table View Controller-->
         <scene sceneID="Jxf-Q1-Utz">
             <objects>
-                <tableViewController id="jEI-BO-IFQ" customClass="MarkedDefectsTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jEI-BO-IFQ" customClass="MarkedDefectsTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3uk-wm-CAq">
                         <rect key="frame" x="0.0" y="0.0" width="738" height="171"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1086,34 +1086,88 @@
         <!--Analysis Samples-->
         <scene sceneID="Tvi-Y7-ih8">
             <objects>
-                <tableViewController id="zSu-RN-CDm" customClass="AnalysisSamplesTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zSu-RN-CDm" customClass="AnalysisSamplesTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1iR-ut-UBo">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Jmr-pm-lae" userLabel="Header">
-                            <rect key="frame" x="0.0" y="64" width="768" height="126"/>
+                            <rect key="frame" x="0.0" y="44" width="768" height="126"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information about the analysis itself will go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIX-VA-gPm">
-                                    <rect key="frame" x="202.5" y="53" width="363" height="21"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WDU-JF-PHY">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="126"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="90D-46-2ov">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="42"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlJ-fJ-P5Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="38B-LO-mKI">
+                                            <rect key="frame" x="0.0" y="42" width="768" height="42"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Factory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRn-0N-sJD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyst" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-HD-ZjK">
+                                                    <rect key="frame" x="384" y="0.0" width="384" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Tv-6u-bs7">
+                                            <rect key="frame" x="0.0" y="84" width="768" height="42"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkpoint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-Tj-bjc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmt-gS-J7c">
+                                                    <rect key="frame" x="384" y="0.0" width="384" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </stackView>
+                                    </subviews>
                                     <animations/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                </stackView>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="fIX-VA-gPm" firstAttribute="centerY" secondItem="Jmr-pm-lae" secondAttribute="centerY" id="mfb-Me-nJh"/>
-                                <constraint firstItem="fIX-VA-gPm" firstAttribute="centerX" secondItem="Jmr-pm-lae" secondAttribute="centerX" id="w62-P2-7Tx"/>
+                                <constraint firstAttribute="trailing" secondItem="WDU-JF-PHY" secondAttribute="trailing" id="QBe-k4-XxP"/>
+                                <constraint firstItem="WDU-JF-PHY" firstAttribute="top" secondItem="Jmr-pm-lae" secondAttribute="top" id="iAL-nm-wtw"/>
+                                <constraint firstAttribute="bottom" secondItem="WDU-JF-PHY" secondAttribute="bottom" id="nYU-VL-wnP"/>
+                                <constraint firstItem="WDU-JF-PHY" firstAttribute="leading" secondItem="Jmr-pm-lae" secondAttribute="leading" id="saw-Rn-u2M"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="analysisSampleCell" textLabel="aZV-q6-mnz" style="IBUITableViewCellStyleDefault" id="V36-wl-QBS">
-                                <rect key="frame" x="0.0" y="218" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="198" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V36-wl-QBS" id="ha8-I1-ypf">
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
@@ -1157,6 +1211,13 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="analystLabel" destination="pMg-HD-ZjK" id="DZo-Yi-ybK"/>
+                        <outlet property="checkpointLabel" destination="qdS-Tj-bjc" id="kCv-Xn-W88"/>
+                        <outlet property="dateLabel" destination="vlJ-fJ-P5Q" id="CIc-Zy-ff1"/>
+                        <outlet property="factoryLabel" destination="PRn-0N-sJD" id="ki7-Cb-dym"/>
+                        <outlet property="shiftLabel" destination="tmt-gS-J7c" id="Eml-a5-j9L"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RM-zp-e8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1165,7 +1226,7 @@
         <!--Factory Table View Controller-->
         <scene sceneID="Hx5-xr-2mW">
             <objects>
-                <tableViewController id="Kh8-mS-wsf" customClass="FactoryTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Kh8-mS-wsf" customClass="FactoryTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b5g-VH-mv2">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1247,7 +1308,7 @@
         <!--Shift Table View Controller-->
         <scene sceneID="zKt-My-6LZ">
             <objects>
-                <tableViewController id="5UX-QT-rOc" customClass="ShiftTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5UX-QT-rOc" customClass="ShiftTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="goS-bL-xdO">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1374,7 +1435,7 @@
         <!--Checkpoint Table View Controller-->
         <scene sceneID="ket-5c-xIr">
             <objects>
-                <tableViewController id="RQp-FF-yCh" customClass="CheckpointTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RQp-FF-yCh" customClass="CheckpointTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nUT-y2-dqW">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1522,7 +1583,7 @@
         <image name="carTop" width="575" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Ba-TG-8FC"/>
+        <segue reference="Uy0-OK-hwC"/>
         <segue reference="zqe-Gx-UxM"/>
     </inferredMetricsTieBreakers>
 </document>

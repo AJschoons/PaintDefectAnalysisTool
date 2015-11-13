@@ -9,9 +9,26 @@
 import UIKit
 
 class AnalysisSamplesTableViewController: UITableViewController {
+    
+    // analysis description labels
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var factoryLabel: UILabel!
+    @IBOutlet weak var analystLabel: UILabel!
+    @IBOutlet weak var checkpointLabel: UILabel!
+    @IBOutlet weak var shiftLabel: UILabel!
 
+    var analysis: Analysis!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        updateAnalysisDescriptionLabels()
+    }
+    
+    func updateAnalysisDescriptionLabels() {
+        dateLabel.text = "Date: \(dateFormatter.stringFromDate(analysis.timeStamp))"
+        factoryLabel.text = "Factory: \(analysis.factory.name)"
+        analystLabel.text = "Analyst: \(analysis.analyst)"
+        checkpointLabel.text = "Checkpoint: \(analysis.checkpoint)"
+        shiftLabel.text = "Shift: \(analysis.shift)"
     }
 }
 

@@ -125,6 +125,7 @@
 		814735A51BF536BB00BF721C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -171,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				81D3259B1BF2647C001CCD1C /* AppDelegate.swift */,
-				8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */,
 				81D325A41BF2647C001CCD1C /* Main.storyboard */,
 				814735A51BF536BB00BF721C /* Managers */,
 				814735A41BF536AC00BF721C /* Models */,
@@ -493,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CSE425Project/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425Project;
 				PRODUCT_NAME = CSE425Project;
@@ -507,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CSE425Project/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE425Project;
 				PRODUCT_NAME = CSE425Project;

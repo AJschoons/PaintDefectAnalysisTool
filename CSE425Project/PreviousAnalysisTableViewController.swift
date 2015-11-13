@@ -11,11 +11,26 @@ import UIKit
 class PreviousAnalysisTableViewController: UITableViewController {
 
     private var analyses = [Analysis]()
+    private var selectedAnalysis: Analysis?
     
     override func viewWillAppear(animated: Bool) {
         // Reload analyses each time the table appears
         analyses = Analysis.fetchAnalyses()
         tableView.reloadData()
+        
+        selectedAnalysis = nil
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier else { return }
+        
+        if identifier == "previousAnalysis" {
+            guard let selectedAnalysis = selectedAnalysis, destination = segue.destinationViewController as? AnalysisSamplesTableViewController else {
+                return
+            }
+            
+            destination.analysis = selectedAnalysis
+        }
     }
 }
 
@@ -54,6 +69,12 @@ extension PreviousAnalysisTableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("previousAnalysis", forIndexPath: indexPath)
         cell.textLabel?.text = analyses[indexPath.row].toString()
         return cell;
+    }
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        // set the selected analysis before the prepareForSegue gets called (didSelect is too late)
+        selectedAnalysis = analyses[indexPath.row]
+        return indexPath
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

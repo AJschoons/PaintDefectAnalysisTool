@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
         switch identifier {
         case "newAnalysis":
             // Starting a new analysis
-            guard let analyst = analystNameTextField.text, factory = selectedFactory, checkpoint = selectedCheckpoint, shift = selectedShift else {
+            guard let analyst = analystNameTextField.text, factory = selectedFactory, checkpoint = selectedCheckpoint, shift = selectedShift, destination = segue.destinationViewController as? AnalysisSamplesTableViewController else {
                 return
             }
             
@@ -75,6 +75,7 @@ class HomeViewController: UIViewController {
             newAnalysis.timeStamp = NSDate() // current date/time
             CoreDataStack.sharedStack.saveContext()
             
+            destination.analysis = newAnalysis
             
         case "factoryTableEmbed":
             factoryTableViewController = (segue.destinationViewController as! FactoryTableViewController)

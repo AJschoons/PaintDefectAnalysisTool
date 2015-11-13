@@ -20,21 +20,21 @@ class Analysis: NSManagedObject {
     // factory the analysis was performed in
     @NSManaged var factory: Factory
     
-    var checkpoint: Checkpoint? {
+    var checkpoint: Checkpoint {
         get {
-            return Checkpoint(rawValue: checkpointString)
+            return Checkpoint(rawValue: checkpointString)!
         }
         set(newCheckpoint) {
-            checkpointString = (newCheckpoint?.rawValue)!
+            checkpointString = newCheckpoint.rawValue
         }
     }
     
-    var shift: Shift? {
+    var shift: Shift {
         get {
-            return Shift(rawValue: shiftString)
+            return Shift(rawValue: shiftString)!
         }
         set(newShift) {
-            shiftString = (newShift?.rawValue)!
+            shiftString = newShift.rawValue
         }
     }
     
