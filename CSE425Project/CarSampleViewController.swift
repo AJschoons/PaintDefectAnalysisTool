@@ -11,10 +11,11 @@ import UIKit
 class CarSampleViewController: UIViewController {
 
     @IBOutlet weak var carSideSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var carLeftImageView: UIImageView!
-    @IBOutlet weak var carTopImageView: UIImageView!
-    @IBOutlet weak var carRightImageView: UIImageView!
-    private var carSideImages = [UIImageView]()
+    @IBOutlet weak var carLeftSideView: UIView!
+    @IBOutlet weak var carTopSideView: UIView!
+    @IBOutlet weak var carRightSideView: UIView!
+    @IBOutlet weak var defectMarkView: DefectMarkView!
+    private var carSideViews = [UIView]()
     
     @IBOutlet weak var defectPickerView: UIPickerView!
     private var defectPickerData = ["Defect 1", "Defect 2", "Defect 3", "Defect 4", "Defect 5", "Defect 6", "Defect 7", "Defect 8", "Defect 9"]
@@ -26,7 +27,7 @@ class CarSampleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        carSideImages = [carLeftImageView, carTopImageView, carRightImageView]
+        carSideViews = [carLeftSideView, carTopSideView, carRightSideView]
         
         // initialize the visible car side image
         updateVisibleCarSide()
@@ -38,10 +39,12 @@ class CarSampleViewController: UIViewController {
     
     // only show the car side that is currently selected; hide all the others
     private func updateVisibleCarSide() {
-        for (index, carSideImage) in carSideImages.enumerate() {
-            let shouldHideCarSideImage = (index != carSideSegmentedControl.selectedSegmentIndex)
-            carSideImage.hidden = shouldHideCarSideImage
+        for (index, carSideView) in carSideViews.enumerate() {
+            let shouldHideCarSideView = (index != carSideSegmentedControl.selectedSegmentIndex)
+            carSideView.hidden = shouldHideCarSideView
         }
+        
+        defectMarkView.updateForNewSide()
     }
 }
 

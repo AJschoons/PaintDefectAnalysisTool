@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */; };
+		8106E8561BF6D68100CCB461 /* DefectMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8551BF6D68100CCB461 /* DefectMarkView.swift */; };
 		8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */; };
 		814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */; };
 		814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735931BF31C4C00BF721C /* CarSampleViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8106E8551BF6D68100CCB461 /* DefectMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefectMarkView.swift; sourceTree = "<group>"; };
 		8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		814735931BF31C4C00BF721C /* CarSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarSampleViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		81D3258F1BF2647C001CCD1C = {
 			isa = PBXGroup;
 			children = (
+				8106E8551BF6D68100CCB461 /* DefectMarkView.swift */,
 				81D3259A1BF2647C001CCD1C /* CSE425Project */,
 				81D325B41BF2647C001CCD1C /* CSE425ProjectTests */,
 				81D325BF1BF2647C001CCD1C /* CSE425ProjectUITests */,
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8106E8561BF6D68100CCB461 /* DefectMarkView.swift in Sources */,
 				8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */,
 				814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */,
 				814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */,
