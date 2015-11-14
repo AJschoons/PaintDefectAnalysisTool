@@ -10,7 +10,25 @@ import UIKit
 
 class DefectMarkView: UIView {
     
-    var mark: CGPoint?
+    private var mark: CGPoint?
+    
+    private func setMark(mark: CGPoint?) {
+        guard let mark = mark else {return}
+        
+        if touchableRect.contains(mark) {
+            self.mark = mark
+            setNeedsDisplay()
+        }
+    }
+    
+    private var currentlySelectedDefectType: DefectType!
+    
+    func setCurrentlySelectedDefectType(defectType: DefectType) {
+        currentlySelectedDefectType = defectType
+        setNeedsDisplay()
+    }
+    
+    private var touchableRect: CGRect! // The region we allow the defect to be placed
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,13 +55,18 @@ class DefectMarkView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
-        // Drawing code
+        if touchableRect == nil {
+            let margin: CGFloat = 20
+            touchableRect = CGRect(x: margin, y: margin, width: rect.width - margin*2, height: rect.height - margin*2)
+        }
+        
         guard let mark = mark else {
             return
         }
         
-        let color = UIColor.redColor()
-        strokeCircleWithCenter(mark, andColor: color)
+        // Drawing code
+        
+        strokeCircleWithCenter(mark, andColor: currentlySelectedDefectType.getColor())
     }
     
     private func strokeCircleWithCenter(center: CGPoint, andColor color: UIColor) {
@@ -54,17 +77,14 @@ class DefectMarkView: UIView {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        mark = touches.first?.locationInView(self)
-        setNeedsDisplay()
+        setMark(touches.first?.locationInView(self))
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        mark = touches.first?.locationInView(self)
-        setNeedsDisplay()
+        setMark(touches.first?.locationInView(self))
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        mark = touches.first?.locationInView(self)
-        setNeedsDisplay()
+        setMark(touches.first?.locationInView(self))
     }
 }

@@ -10,6 +10,14 @@
         <relationship name="factory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Factory" inverseName="analyses" inverseEntity="Factory" syncable="YES"/>
         <userInfo/>
     </entity>
+    <entity name="Defect" syncable="YES">
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DefectType" inverseName="defects" inverseEntity="DefectType" syncable="YES"/>
+    </entity>
+    <entity name="DefectType" representedClassName=".DefectType" syncable="YES">
+        <attribute name="colorString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="defects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Defect" inverseName="type" inverseEntity="Defect" syncable="YES"/>
+    </entity>
     <entity name="Factory" representedClassName=".Factory" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,5 +26,7 @@
     <elements>
         <element name="Analysis" positionX="261" positionY="189" width="128" height="120"/>
         <element name="Factory" positionX="261" positionY="225" width="128" height="90"/>
+        <element name="DefectType" positionX="270" positionY="234" width="128" height="90"/>
+        <element name="Defect" positionX="279" positionY="243" width="128" height="60"/>
     </elements>
 </model>

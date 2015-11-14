@@ -918,9 +918,6 @@
                                                             <segment title="High"/>
                                                         </segments>
                                                         <color key="tintColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <connections>
-                                                            <action selector="carSideSegmentedControlIndexDidChange:" destination="vo7-dz-3eY" eventType="valueChanged" id="1eA-bN-rvh"/>
-                                                        </connections>
                                                     </segmentedControl>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQX-er-Hpj">
                                                         <rect key="frame" x="0.0" y="1" width="239" height="28"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */; };
 		8106E8561BF6D68100CCB461 /* DefectMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8551BF6D68100CCB461 /* DefectMarkView.swift */; };
+		8106E8581BF7AAD800CCB461 /* DefectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8571BF7AAD800CCB461 /* DefectType.swift */; };
+		8106E85A1BF7B6D900CCB461 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8591BF7B6D900CCB461 /* UIColorExtension.swift */; };
 		8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */; };
 		814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */; };
 		814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735931BF31C4C00BF721C /* CarSampleViewController.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8106E8551BF6D68100CCB461 /* DefectMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefectMarkView.swift; sourceTree = "<group>"; };
+		8106E8571BF7AAD800CCB461 /* DefectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefectType.swift; sourceTree = "<group>"; };
+		8106E8591BF7B6D900CCB461 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		8147358D1BF2C26C00BF721C /* NewAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		8147358F1BF2D61200BF721C /* PreviousAnalysisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousAnalysisTableViewController.swift; sourceTree = "<group>"; };
 		814735931BF31C4C00BF721C /* CarSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarSampleViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			children = (
 				8147359F1BF4FE7C00BF721C /* Analysis.swift */,
 				814735A11BF50D2000BF721C /* Factory.swift */,
+				8106E8571BF7AAD800CCB461 /* DefectType.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */,
 				81D325AC1BF2647C001CCD1C /* Info.plist */,
 				81D3259D1BF2647C001CCD1C /* CSE425Project.xcdatamodeld */,
+				8106E8591BF7B6D900CCB461 /* UIColorExtension.swift */,
 			);
 			path = CSE425Project;
 			sourceTree = "<group>";
@@ -343,6 +349,8 @@
 				814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */,
 				814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */,
 				814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */,
+				8106E85A1BF7B6D900CCB461 /* UIColorExtension.swift in Sources */,
+				8106E8581BF7AAD800CCB461 /* DefectType.swift in Sources */,
 				8147359A1BF3A08500BF721C /* MarkedDefectsTableViewController.swift in Sources */,
 				814735A01BF4FE7C00BF721C /* Analysis.swift in Sources */,
 				8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */,
