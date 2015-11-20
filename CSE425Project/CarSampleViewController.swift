@@ -10,25 +10,75 @@ import UIKit
 
 class CarSampleViewController: UIViewController {
     
+    @IBOutlet weak var backBarButton: UIBarButtonItem!
+    @IBOutlet var doneBarButton: UIBarButtonItem! // not a weak reference so still retained when not shown
+    
     @IBOutlet weak var chooseModelButton: UIButton!
-
+    
+    // car selection area
     @IBOutlet weak var carSideSegmentedControl: UISegmentedControl!
     @IBOutlet weak var carLeftSideView: UIView!
     @IBOutlet weak var carTopSideView: UIView!
     @IBOutlet weak var carRightSideView: UIView!
-    @IBOutlet weak var defectMarkView: DefectMarkView!
     private var carSideViews = [UIView]()
+    @IBOutlet weak var defectMarkView: DefectMarkView!
     
     @IBOutlet weak var defectPickerView: UIPickerView!
     private var defectTypes = [DefectType]()
     
+    @IBOutlet weak var leftSideSwitch: UISwitch!
+    @IBOutlet weak var rightSideSwitch: UISwitch!
+    
+    var analysis: Analysis!
+    var sample: Sample!
+    var isNewSample: Bool!
+    
     private(set) var selectedDefectType: DefectType!
-    
-    private var selectedModelType: ModelType?
-    
     private func setSelectedDefectType(defectType: DefectType) {
         selectedDefectType = defectType
         defectMarkView.setCurrentlySelectedDefectType(defectType)
+    }
+    
+    private var selectedModelType: ModelType?
+    private func setSelectedModelType(modelType: ModelType) {
+        selectedModelType = modelType
+        sample.model = selectedModelType
+        updateChooseModelButton()
+    }
+    
+    @IBAction func onBackBarButton(sender: AnyObject) {
+        if isNewSample! {
+            // remove the sample, since this button says "Cancel" for new samples
+            analysis.removeSample(sample)
+            CoreDataStack.sharedStack.saveContext()
+            
+            // modally presented for a new sample
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            // save the changed sample data
+            CoreDataStack.sharedStack.saveContext()
+            
+            // when view a sample it's pushed instead of modally presented
+            navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    @IBAction func onDoneBarButton(sender: AnyObject) {
+        guard isNewSample! else { return } // done button shouldn't be there when viewing a previous sample
+        
+        // save the new sample so it persists
+        CoreDataStack.sharedStack.saveContext()
+        
+        // modally presented for a new sample
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func leftSwitchValueDidChange(sender: AnyObject) {
+        sample.leftSideDone = leftSideSwitch.on
+    }
+    
+    @IBAction func rightSwitchValueDidChange(sender: AnyObject) {
+        sample.rightSideDone = rightSideSwitch.on
     }
     
     @IBAction func carSideSegmentedControlIndexDidChange(sender: AnyObject) {
@@ -47,6 +97,22 @@ class CarSampleViewController: UIViewController {
         
         // setup picker view
         centerWheelForDefectPickerView(defectPickerView)
+        
+        if isNewSample! {
+            backBarButton.title = "Cancel"
+        } else {
+            initializeUIWithSample()
+            navigationItem.rightBarButtonItems = nil // don't show the "Done" button
+        }
+    }
+    
+    private func initializeUIWithSample() {
+        if sample.model != nil {
+            setSelectedModelType(sample.model!)
+        }
+        
+        leftSideSwitch.on = sample.leftSideDone
+        rightSideSwitch.on = sample.rightSideDone
     }
     
     
@@ -77,8 +143,7 @@ class CarSampleViewController: UIViewController {
 
 extension CarSampleViewController: CarModelTableViewControllerDelegate {
     func carModelTableViewController(carModelTableViewController: CarModelTableViewController, didSelectModelType modelType: ModelType) {
-        selectedModelType = modelType
-        updateChooseModelButton()
+        setSelectedModelType(modelType)
     }
 }
 

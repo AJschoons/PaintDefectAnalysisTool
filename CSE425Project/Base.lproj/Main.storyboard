@@ -534,6 +534,9 @@
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-za-k9N">
                                                                 <rect key="frame" x="82" y="0.0" width="51" height="31"/>
                                                                 <animations/>
+                                                                <connections>
+                                                                    <action selector="leftSwitchValueDidChange:" destination="vo7-dz-3eY" eventType="valueChanged" id="MhM-Pa-aTR"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                         <animations/>
@@ -601,6 +604,9 @@
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PXn-Og-Koo">
                                                                 <rect key="frame" x="93" y="0.0" width="51" height="31"/>
                                                                 <animations/>
+                                                                <connections>
+                                                                    <action selector="rightSwitchValueDidChange:" destination="vo7-dz-3eY" eventType="valueChanged" id="0lo-Mq-GoN"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                         <animations/>
@@ -1069,13 +1075,18 @@
                     <navigationItem key="navigationItem" title="Automotive Sample" id="zVG-zM-ZmS">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="VMq-LC-s0d">
                             <connections>
-                                <segue destination="Aal-Vw-zgy" kind="unwind" unwindAction="unwindFromSampleBackButton:" id="eZe-nN-RdC"/>
+                                <action selector="onBackBarButton:" destination="vo7-dz-3eY" id="FWk-UB-6fv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="fxi-6w-ll8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="fxi-6w-ll8">
+                            <connections>
+                                <action selector="onDoneBarButton:" destination="vo7-dz-3eY" id="UF4-2Z-TGI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="backBarButton" destination="VMq-LC-s0d" id="bj0-BV-Qnz"/>
                         <outlet property="carLeftSideView" destination="3Pb-1W-vXr" id="s7E-6e-Pwq"/>
                         <outlet property="carRightSideView" destination="2gG-Kk-odf" id="Ydo-bc-5aj"/>
                         <outlet property="carSideSegmentedControl" destination="Tif-WO-Wrr" id="tSL-W9-AqM"/>
@@ -1083,6 +1094,9 @@
                         <outlet property="chooseModelButton" destination="a1p-e5-hmc" id="Y92-Fw-yGb"/>
                         <outlet property="defectMarkView" destination="JTp-H2-8q7" id="jyf-5S-bZg"/>
                         <outlet property="defectPickerView" destination="XQP-Y1-M2b" id="CCX-dM-8tu"/>
+                        <outlet property="doneBarButton" destination="fxi-6w-ll8" id="6nj-sE-s4P"/>
+                        <outlet property="leftSideSwitch" destination="Qh4-za-k9N" id="a0R-cU-SsM"/>
+                        <outlet property="rightSideSwitch" destination="PXn-Og-Koo" id="4R4-hz-jG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xi3-s3-rVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1233,7 +1247,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="vo7-dz-3eY" kind="show" id="jtG-lo-9GD"/>
+                                    <segue destination="vo7-dz-3eY" kind="show" identifier="viewSample" id="jtG-lo-9GD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1267,7 +1281,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RM-zp-e8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Aal-Vw-zgy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2088" y="877"/>
         </scene>

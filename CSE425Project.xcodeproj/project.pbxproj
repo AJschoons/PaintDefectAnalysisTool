@@ -154,8 +154,8 @@
 		814735A71BF5372100BF721C /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				8147359B1BF43AD400BF721C /* CarModelTableViewController.swift */,
 				814735931BF31C4C00BF721C /* CarSampleViewController.swift */,
+				8147359B1BF43AD400BF721C /* CarModelTableViewController.swift */,
 				814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */,
 			);
 			name = Sample;
