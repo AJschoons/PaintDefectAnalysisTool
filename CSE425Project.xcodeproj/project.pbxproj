@@ -22,6 +22,8 @@
 		814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735A81BF53F7700BF721C /* FactoryTableViewController.swift */; };
 		814735AB1BF5785C00BF721C /* CheckpointTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735AA1BF5785C00BF721C /* CheckpointTableViewController.swift */; };
 		814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814735AC1BF57AF000BF721C /* ShiftTableViewController.swift */; };
+		815700721BFEAF21004F9C86 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815700711BFEAF21004F9C86 /* ModelType.swift */; };
+		815700741BFECF37004F9C86 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815700731BFECF37004F9C86 /* Sample.swift */; };
 		81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259B1BF2647C001CCD1C /* AppDelegate.swift */; };
 		81D3259F1BF2647C001CCD1C /* CSE425Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D3259D1BF2647C001CCD1C /* CSE425Project.xcdatamodeld */; };
 		81D325A31BF2647C001CCD1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D325A21BF2647C001CCD1C /* HomeViewController.swift */; };
@@ -65,6 +67,8 @@
 		814735A81BF53F7700BF721C /* FactoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryTableViewController.swift; sourceTree = "<group>"; };
 		814735AA1BF5785C00BF721C /* CheckpointTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckpointTableViewController.swift; sourceTree = "<group>"; };
 		814735AC1BF57AF000BF721C /* ShiftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTableViewController.swift; sourceTree = "<group>"; };
+		815700711BFEAF21004F9C86 /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		815700731BFECF37004F9C86 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		81D325981BF2647C001CCD1C /* CSE425Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSE425Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3259B1BF2647C001CCD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3259E1BF2647C001CCD1C /* CSE425Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSE425Project.xcdatamodel; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				8147359F1BF4FE7C00BF721C /* Analysis.swift */,
 				814735A11BF50D2000BF721C /* Factory.swift */,
 				8106E8571BF7AAD800CCB461 /* DefectType.swift */,
+				815700711BFEAF21004F9C86 /* ModelType.swift */,
+				815700731BFECF37004F9C86 /* Sample.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */,
 				814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */,
 				814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */,
+				815700741BFECF37004F9C86 /* Sample.swift in Sources */,
 				8106E85A1BF7B6D900CCB461 /* UIColorExtension.swift in Sources */,
 				8106E8581BF7AAD800CCB461 /* DefectType.swift in Sources */,
 				8147359A1BF3A08500BF721C /* MarkedDefectsTableViewController.swift in Sources */,
@@ -356,6 +363,7 @@
 				8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */,
 				814735961BF39CB200BF721C /* AnalysisSamplesTableViewController.swift in Sources */,
 				8147359C1BF43AD400BF721C /* CarModelTableViewController.swift in Sources */,
+				815700721BFEAF21004F9C86 /* ModelType.swift in Sources */,
 				81D3259C1BF2647C001CCD1C /* AppDelegate.swift in Sources */,
 				814735A21BF50D2000BF721C /* Factory.swift in Sources */,
 				814735901BF2D61200BF721C /* PreviousAnalysisTableViewController.swift in Sources */,

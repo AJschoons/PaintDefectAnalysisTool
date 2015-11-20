@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol CheckpointTableViewControllerDelegate {
+protocol CheckpointTableViewControllerDelegate: class {
     func checkpointTableViewController(checkpointTableViewController: CheckpointTableViewController, didSelectCheckpoint checkpoint: Checkpoint)
 }
 
 class CheckpointTableViewController: NewAnalysisTableViewController {
     
-    var delegate: CheckpointTableViewControllerDelegate?
+    weak var delegate: CheckpointTableViewControllerDelegate?
 }
 
 extension CheckpointTableViewController {

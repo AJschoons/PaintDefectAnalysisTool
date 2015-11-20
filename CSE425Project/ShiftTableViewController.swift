@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol ShiftTableViewControllerDelegate {
+protocol ShiftTableViewControllerDelegate: class {
     func shiftTableViewController(shiftTableViewController: ShiftTableViewController, didSelectShift shift: Shift)
 }
 
 class ShiftTableViewController: NewAnalysisTableViewController {
     
-    var delegate: ShiftTableViewControllerDelegate?
+    weak var delegate: ShiftTableViewControllerDelegate?
 }
 
 extension ShiftTableViewController {

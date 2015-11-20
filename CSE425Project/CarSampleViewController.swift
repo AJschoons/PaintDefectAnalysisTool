@@ -9,6 +9,8 @@
 import UIKit
 
 class CarSampleViewController: UIViewController {
+    
+    @IBOutlet weak var chooseModelButton: UIButton!
 
     @IBOutlet weak var carSideSegmentedControl: UISegmentedControl!
     @IBOutlet weak var carLeftSideView: UIView!
@@ -21,6 +23,8 @@ class CarSampleViewController: UIViewController {
     private var defectTypes = [DefectType]()
     
     private(set) var selectedDefectType: DefectType!
+    
+    private var selectedModelType: ModelType?
     
     private func setSelectedDefectType(defectType: DefectType) {
         selectedDefectType = defectType
@@ -54,6 +58,27 @@ class CarSampleViewController: UIViewController {
         }
         
         defectMarkView.updateForNewSide()
+    }
+    
+    private func updateChooseModelButton() {
+        let buttonTitle = (selectedModelType != nil) ? selectedModelType!.name : "Choose Model"
+        chooseModelButton.setTitle(buttonTitle, forState: UIControlState.Normal)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier else { return }
+        
+        if identifier == "carModelPopover" {
+            guard let destination = segue.destinationViewController as? CarModelTableViewController else { return }
+            destination.delegate = self
+        }
+    }
+}
+
+extension CarSampleViewController: CarModelTableViewControllerDelegate {
+    func carModelTableViewController(carModelTableViewController: CarModelTableViewController, didSelectModelType modelType: ModelType) {
+        selectedModelType = modelType
+        updateChooseModelButton()
     }
 }
 

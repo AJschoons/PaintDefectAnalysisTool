@@ -16,6 +16,7 @@ class Analysis: NSManagedObject {
     @NSManaged private var checkpointString: String
     @NSManaged private var shiftString: String
     @NSManaged var timeStamp: NSDate
+    @NSManaged private var samples: NSOrderedSet
     
     // factory the analysis was performed in
     @NSManaged var factory: Factory
@@ -36,6 +37,20 @@ class Analysis: NSManagedObject {
         set(newShift) {
             shiftString = newShift.rawValue
         }
+    }
+    
+    func addSample(sample: Sample) {
+        let samplesSet = mutableOrderedSetValueForKey("samples")
+        samplesSet.addObject(sample)
+    }
+    
+    func removeSample(sample: Sample) {
+        let samplesSet = mutableOrderedSetValueForKey("samples")
+        samplesSet.removeObject(sample)
+    }
+    
+    func getSamplesArray() -> [Sample] {
+        return samples.array as! [Sample]
     }
     
     func toString() -> String {

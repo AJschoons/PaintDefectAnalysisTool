@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol FactoryTableViewControllerDelegate {
+protocol FactoryTableViewControllerDelegate: class {
     func factoryTableViewController(factoryTableViewController: FactoryTableViewController, didSelectFactory factory: Factory)
 }
 
 class FactoryTableViewController: NewAnalysisTableViewController {
 
-    var delegate: FactoryTableViewControllerDelegate?
+    weak var delegate: FactoryTableViewControllerDelegate?
 }
 
 extension FactoryTableViewController {

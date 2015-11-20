@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dsQ-B9-rgQ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -18,15 +17,15 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="previousAnalysis" textLabel="fmm-Ic-EBZ" style="IBUITableViewCellStyleDefault" id="J8j-bG-pEq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="previousAnalysis" textLabel="fmm-Ic-EBZ" style="IBUITableViewCellStyleDefault" id="J8j-bG-pEq">
                                 <rect key="frame" x="0.0" y="28" width="738" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J8j-bG-pEq" id="YpZ-Ym-fJb">
-                                    <rect key="frame" x="0.0" y="0.0" width="738" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Information about the previous analysis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fmm-Ic-EBZ">
-                                            <rect key="frame" x="53" y="0.0" width="632" height="43.5"/>
+                                            <rect key="frame" x="53" y="0.0" width="614" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -458,20 +457,20 @@
             <objects>
                 <tableViewController id="TJd-7e-sqr" customClass="CarModelTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oV4-SN-p6C">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="carModel" textLabel="dl0-RE-SmG" style="IBUITableViewCellStyleDefault" id="cKx-5V-V1L">
-                                <rect key="frame" x="0.0" y="28" width="250" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="175" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cKx-5V-V1L" id="jn6-En-lv1">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Car Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dl0-RE-SmG">
-                                            <rect key="frame" x="15" y="0.0" width="220" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="145" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -490,16 +489,16 @@
                         </connections>
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="250" height="150"/>
+                    <size key="freeformSize" width="175" height="175"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="size" keyPath="preferredContentSize">
-                            <size key="value" width="250" height="150"/>
+                        <userDefinedRuntimeAttribute type="size" keyPath="popoverSize">
+                            <size key="value" width="175" height="175"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey1-ZK-bkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3163" y="94"/>
+            <point key="canvasLocation" x="4119" y="184"/>
         </scene>
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
@@ -514,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkK-Wi-eIu" userLabel="Sample Info">
-                                <rect key="frame" x="15" y="34" width="738" height="60"/>
+                                <rect key="frame" x="15" y="54" width="738" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-Nd-I0d" userLabel="Visible Region">
                                         <rect key="frame" x="0.0" y="10" width="738" height="50"/>
@@ -562,7 +561,7 @@
                                                         <animations/>
                                                         <state key="normal" title="Choose Model"/>
                                                         <connections>
-                                                            <segue destination="TJd-7e-sqr" kind="popoverPresentation" popoverAnchorView="iSy-tX-wNG" id="S5E-ZT-SDH">
+                                                            <segue destination="TJd-7e-sqr" kind="popoverPresentation" identifier="carModelPopover" popoverAnchorView="iSy-tX-wNG" id="S5E-ZT-SDH">
                                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                             </segue>
                                                         </connections>
@@ -656,7 +655,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-Yh-tAh" userLabel="Mark Defect Area">
-                                <rect key="frame" x="15" y="109" width="738" height="650"/>
+                                <rect key="frame" x="15" y="129" width="738" height="650"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d46-7M-st3" userLabel="Car Select">
                                         <rect key="frame" x="0.0" y="0.0" width="738" height="360"/>
@@ -1002,7 +1001,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCL-m6-Kcu" userLabel="Defect Table">
-                                <rect key="frame" x="15" y="774" width="738" height="191"/>
+                                <rect key="frame" x="15" y="794" width="738" height="171"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZZ-v7-HBC" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="738" height="30"/>
@@ -1026,7 +1025,7 @@
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-QA-XMb">
-                                        <rect key="frame" x="0.0" y="30" width="738" height="161"/>
+                                        <rect key="frame" x="0.0" y="30" width="738" height="141"/>
                                         <animations/>
                                         <connections>
                                             <segue destination="jEI-BO-IFQ" kind="embed" id="oCs-6d-6ww"/>
@@ -1068,6 +1067,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Automotive Sample" id="zVG-zM-ZmS">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="VMq-LC-s0d">
+                            <connections>
+                                <segue destination="Aal-Vw-zgy" kind="unwind" unwindAction="unwindFromSampleBackButton:" id="eZe-nN-RdC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="fxi-6w-ll8"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -1076,20 +1080,21 @@
                         <outlet property="carRightSideView" destination="2gG-Kk-odf" id="Ydo-bc-5aj"/>
                         <outlet property="carSideSegmentedControl" destination="Tif-WO-Wrr" id="tSL-W9-AqM"/>
                         <outlet property="carTopSideView" destination="u5Y-Pu-L13" id="kNj-LC-7b8"/>
+                        <outlet property="chooseModelButton" destination="a1p-e5-hmc" id="Y92-Fw-yGb"/>
                         <outlet property="defectMarkView" destination="JTp-H2-8q7" id="jyf-5S-bZg"/>
                         <outlet property="defectPickerView" destination="XQP-Y1-M2b" id="CCX-dM-8tu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xi3-s3-rVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="877"/>
+            <point key="canvasLocation" x="4128" y="877"/>
         </scene>
         <!--Marked Defects Table View Controller-->
         <scene sceneID="Jxf-Q1-Utz">
             <objects>
                 <tableViewController id="jEI-BO-IFQ" customClass="MarkedDefectsTableViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3uk-wm-CAq">
-                        <rect key="frame" x="0.0" y="0.0" width="738" height="161"/>
+                        <rect key="frame" x="0.0" y="0.0" width="738" height="141"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1123,7 +1128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TL-Qw-s4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="1653.5"/>
+            <point key="canvasLocation" x="4128" y="1658.5"/>
         </scene>
         <!--Analysis Samples-->
         <scene sceneID="Tvi-Y7-ih8">
@@ -1135,7 +1140,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Jmr-pm-lae" userLabel="Header">
-                            <rect key="frame" x="0.0" y="44" width="768" height="126"/>
+                            <rect key="frame" x="0.0" y="64" width="768" height="126"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WDU-JF-PHY">
@@ -1148,7 +1153,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="768" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1161,14 +1166,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyst" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-HD-ZjK">
                                                     <rect key="frame" x="384" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1181,14 +1186,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmt-gS-J7c">
                                                     <rect key="frame" x="384" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1208,15 +1213,15 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="analysisSampleCell" textLabel="aZV-q6-mnz" style="IBUITableViewCellStyleDefault" id="V36-wl-QBS">
-                                <rect key="frame" x="0.0" y="198" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="analysisSampleCell" textLabel="aZV-q6-mnz" style="IBUITableViewCellStyleDefault" id="V36-wl-QBS">
+                                <rect key="frame" x="0.0" y="218" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V36-wl-QBS" id="ha8-I1-ypf">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="682" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZV-q6-mnz">
-                                            <rect key="frame" x="68" y="0.0" width="632" height="43.5"/>
+                                            <rect key="frame" x="68" y="0.0" width="614" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1228,7 +1233,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="vo7-dz-3eY" kind="show" id="zqe-Gx-UxM"/>
+                                    <segue destination="vo7-dz-3eY" kind="show" id="jtG-lo-9GD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1243,7 +1248,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="q5k-Dx-Jlf">
                                 <connections>
-                                    <segue destination="vo7-dz-3eY" kind="show" id="0wf-aH-smf"/>
+                                    <segue destination="9HF-8O-QQw" kind="presentation" identifier="addNewSample" id="0wf-aH-smf"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title=" " id="sGx-EW-7dd"/>
@@ -1262,6 +1267,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RM-zp-e8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Aal-Vw-zgy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2088" y="877"/>
         </scene>
@@ -1618,6 +1624,25 @@
             </objects>
             <point key="canvasLocation" x="90" y="877"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hoe-Bo-76P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9HF-8O-QQw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dmP-8X-jki">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vo7-dz-3eY" kind="relationship" relationship="rootViewController" id="Nty-ni-Qes"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUC-X1-6tT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3148" y="877"/>
+        </scene>
     </scenes>
     <resources>
         <image name="carLeft" width="575" height="250"/>
@@ -1625,7 +1650,7 @@
         <image name="carTop" width="575" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uy0-OK-hwC"/>
-        <segue reference="zqe-Gx-UxM"/>
+        <segue reference="1Ba-TG-8FC"/>
+        <segue reference="jtG-lo-9GD"/>
     </inferredMetricsTieBreakers>
 </document>
