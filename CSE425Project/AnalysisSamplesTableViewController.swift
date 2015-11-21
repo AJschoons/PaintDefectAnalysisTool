@@ -23,6 +23,9 @@ class AnalysisSamplesTableViewController: UITableViewController {
     // should be reset whenever passed to the view controller needing it
     private var selectedSample: Sample?
     
+    let textColorForDone = UIColor(rgba: "#16A085")
+    let textColorForNotDone = UIColor.redColor()
+    
     override func viewDidLoad() {
         updateAnalysisDescriptionLabels()
     }
@@ -66,6 +69,27 @@ class AnalysisSamplesTableViewController: UITableViewController {
 
 extension AnalysisSamplesTableViewController {
     // MARK: - Table view data source
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        let hasData = analysis.getSamplesArray().count > 0
+        
+        var numberOfSections = 0
+        if hasData {
+            numberOfSections = 1
+            tableView.separatorStyle = .SingleLine
+            tableView.backgroundView = nil
+        } else {
+            let noDataLabel = UILabel(frame: CGRectMake(0, 0, tableView.bounds.size.width, tableView.bounds.size.height))
+            noDataLabel.text = "No Samples To Show"
+            noDataLabel.textAlignment = .Center
+            noDataLabel.font = UIFont.systemFontOfSize(14)
+            
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .None
+        }
+        
+        return numberOfSections;
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return analysis.getSamplesArray().count
     }
@@ -93,7 +117,7 @@ extension AnalysisSamplesTableViewController {
         cell.textLabel?.text = "Sample \(indexPath.row), Model: \(sampleModelText), Left: \(leftSideText), Right: \(rightSideText)"
         
         let isSampleDone = sample.leftSideDone && sample.rightSideDone
-        cell.textLabel?.textColor = isSampleDone ? UIColor.greenColor() : UIColor.redColor()
+        cell.textLabel?.textColor = isSampleDone ? textColorForDone : textColorForNotDone
         
         return cell;
     }

@@ -11,15 +11,23 @@ import UIKit
 class DefectMarkView: UIView {
     
     private var mark: CGPoint?
-    
     private func setMark(mark: CGPoint?) {
-        guard let mark = mark else {return}
+        guard let mark = mark else { return }
         
         if touchableRect.contains(mark) {
             self.mark = mark
             setNeedsDisplay()
         }
     }
+    
+    private let roofBezierPath = UIBezierPath()
+    private let roofBeizerColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
+    private let hoodBezierPath = UIBezierPath()
+    private let hoodBeizerColor = UIColor.blueColor().colorWithAlphaComponent(0.1)
+    private let deckBezierPath = UIBezierPath()
+    private let deckBeizerColor = UIColor.redColor().colorWithAlphaComponent(0.15)
+    private let leftSideBezierPath = UIBezierPath()
+    private let rightSideBezierPath = UIBezierPath()
     
     private var currentlySelectedDefectType: DefectType!
     
@@ -60,13 +68,101 @@ class DefectMarkView: UIView {
             touchableRect = CGRect(x: margin, y: margin, width: rect.width - margin*2, height: rect.height - margin*2)
         }
         
-        guard let mark = mark else {
-            return
+        //
+        // Drawing code
+        //
+        strokeRegionsInRect(rect)
+        
+        if mark != nil {
+            strokeCircleWithCenter(mark!, andColor: currentlySelectedDefectType.getColor())
         }
         
-        // Drawing code
         
-        strokeCircleWithCenter(mark, andColor: currentlySelectedDefectType.getColor())
+    }
+    
+    private func strokeRegionsInRect(rect: CGRect) {
+        let w = rect.width
+        let h = rect.height
+        
+        //
+        // roof region
+        //
+        
+        let roofTopLeft = CGPoint(x: w * 0.14783, y: h * 0.29)
+        let roofBottomLeft = CGPoint(x: w * 0.14783, y: h * 0.7)
+        let roofTopMiddle = CGPoint(x: w * 0.50435, y: h * 0.29)
+        let roofBottomMiddle = CGPoint(x: w * 0.50435, y: h * 0.7)
+        let roofTopRight = CGPoint(x: w * 0.65217, y: h * 0.22)
+        let roofBottomRight = CGPoint(x: w * 0.65217, y: h * 0.78)
+        
+        roofBeizerColor.set()
+        roofBezierPath.moveToPoint(roofTopLeft)
+        roofBezierPath.addLineToPoint(roofBottomLeft)
+        roofBezierPath.addLineToPoint(roofBottomMiddle)
+        roofBezierPath.addLineToPoint(roofBottomRight)
+        roofBezierPath.addLineToPoint(roofTopRight)
+        roofBezierPath.addLineToPoint(roofTopMiddle)
+        roofBezierPath.closePath()
+        roofBezierPath.fill()
+        
+        //
+        // hood region
+        //
+        
+        let hoodTopRight = CGPoint(x: w * 0.90435, y: h * 0.25)
+        let hoodBottomRight = CGPoint(x: w * 0.90435, y: h * 0.75)
+        
+        hoodBeizerColor.set()
+        hoodBezierPath.moveToPoint(roofTopRight)
+        hoodBezierPath.addLineToPoint(roofBottomRight)
+        hoodBezierPath.addLineToPoint(hoodBottomRight)
+        hoodBezierPath.addLineToPoint(hoodTopRight)
+        hoodBezierPath.closePath()
+        hoodBezierPath.fill()
+        
+        //
+        // deck region
+        //
+        
+        let deckTopLeft = CGPoint(x: w * 0.05652, y: h * 0.19)
+        let deckBottomLeft = CGPoint(x: w * 0.05652, y: h * 0.8)
+        
+        deckBeizerColor.set()
+        deckBezierPath.moveToPoint(roofTopLeft)
+        deckBezierPath.addLineToPoint(deckTopLeft)
+        deckBezierPath.addLineToPoint(deckBottomLeft)
+        deckBezierPath.addLineToPoint(roofBottomLeft)
+        deckBezierPath.closePath()
+        deckBezierPath.fill()
+        
+        //
+        // left region
+        //
+        
+        let carMiddleLeft = CGPoint(x: deckTopLeft.x, y: (deckTopLeft.y + deckBottomLeft.y) / 2)
+        let carMiddleRight = CGPoint(x: hoodTopRight.x, y: (hoodTopRight.y + hoodBottomRight.y) / 2)
+        
+        leftSideBezierPath.moveToPoint(carMiddleLeft)
+        leftSideBezierPath.addLineToPoint(deckBottomLeft)
+        leftSideBezierPath.addLineToPoint(roofBottomLeft)
+        leftSideBezierPath.addLineToPoint(roofBottomMiddle)
+        leftSideBezierPath.addLineToPoint(roofBottomRight)
+        leftSideBezierPath.addLineToPoint(hoodBottomRight)
+        leftSideBezierPath.addLineToPoint(carMiddleRight)
+        leftSideBezierPath.closePath()
+        
+        //
+        // right region
+        //
+        
+        rightSideBezierPath.moveToPoint(deckTopLeft)
+        rightSideBezierPath.addLineToPoint(carMiddleLeft)
+        rightSideBezierPath.addLineToPoint(carMiddleRight)
+        rightSideBezierPath.addLineToPoint(hoodTopRight)
+        rightSideBezierPath.addLineToPoint(roofTopRight)
+        rightSideBezierPath.addLineToPoint(roofTopMiddle)
+        rightSideBezierPath.addLineToPoint(roofTopLeft)
+        rightSideBezierPath.closePath()
     }
     
     private func strokeCircleWithCenter(center: CGPoint, andColor color: UIColor) {
