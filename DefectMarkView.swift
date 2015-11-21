@@ -20,6 +20,8 @@ class DefectMarkView: UIView {
         }
     }
     
+    private var selectedSampleSide: SampleSide!
+    
     private let roofBezierPath = UIBezierPath()
     private let roofBeizerColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
     private let hoodBezierPath = UIBezierPath()
@@ -53,8 +55,9 @@ class DefectMarkView: UIView {
         backgroundColor = UIColor.clearColor()
     }
     
-    func updateForNewSide() {
+    func updateForNewSelectedSampleSide(sampleSide: SampleSide) {
         mark = nil
+        selectedSampleSide = sampleSide
         setNeedsDisplay()
     }
     
@@ -71,7 +74,10 @@ class DefectMarkView: UIView {
         //
         // Drawing code
         //
-        strokeRegionsInRect(rect)
+        
+        if (selectedSampleSide == .Top) {
+            strokeTopRegionsInRect(rect)
+        }
         
         if mark != nil {
             strokeCircleWithCenter(mark!, andColor: currentlySelectedDefectType.getColor())
@@ -80,7 +86,7 @@ class DefectMarkView: UIView {
         
     }
     
-    private func strokeRegionsInRect(rect: CGRect) {
+    private func strokeTopRegionsInRect(rect: CGRect) {
         let w = rect.width
         let h = rect.height
         

@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 enum SampleSide: Int {
-    case Left = 1, Top, Right
+    case Left = 0, Top, Right
 }
 
 class Sample: NSManagedObject {
