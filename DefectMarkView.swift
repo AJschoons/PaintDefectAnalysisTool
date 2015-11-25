@@ -26,7 +26,7 @@ class DefectMarkView: UIView {
     private(set) var markPlane: DefectPlane?
     private(set) var markSide: DefectSide?
     
-    private var selectedSampleSide: SampleSide!
+    private(set) var selectedSampleSide: SampleSide!
     
     // used to display information about the defect
     private var defectLocationInformationLabel: UILabel!
@@ -84,6 +84,10 @@ class DefectMarkView: UIView {
         setMark(nil)
         selectedSampleSide = sampleSide
         setNeedsDisplay()
+    }
+    
+    func resetAfterMarkingDefect() {
+        setMark(nil)
     }
     
     private func updateMarkVariablesFromNewMark(mark: CGPoint?) {

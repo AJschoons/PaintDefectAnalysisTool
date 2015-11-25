@@ -30,6 +30,7 @@ class CarSampleViewController: UIViewController {
     // editing non-location based info for defect
     @IBOutlet weak var defectPickerView: UIPickerView!
     private var defectTypes = [DefectType]()
+    @IBOutlet weak var defectSeveritySegmentedControl: UISegmentedControl!
     
     var analysis: Analysis!
     var sample: Sample!
@@ -89,6 +90,33 @@ class CarSampleViewController: UIViewController {
         updateVisibleCarSide()
     }
     
+    @IBAction func onMarkDefect(sender: AnyObject) {
+        let sampleModelNotSelected = (sample.model == nil)
+        let defectNotMarked = (defectMarkView.mark == nil)
+        let defectMarkRegionInvalid = (defectMarkView.markRegion == nil)
+        
+        guard !sampleModelNotSelected && !defectNotMarked && !defectMarkRegionInvalid else {
+            let alertTitle = "Unable To Mark Defect"
+            let alertDismissAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
+            
+            var alertMessage = ""
+            if sampleModelNotSelected {
+                alertMessage = "A car model must be set before marking defects"
+            } else if defectNotMarked {
+                alertMessage = "A defect must be marked on the currently selected car side"
+            } else if defectMarkRegionInvalid {
+                alertMessage = "The marked defect must be in a valid region other than 'N/A'"
+            }
+            
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+            alertController.addAction(alertDismissAction)
+            presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        markDefect()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         carSideViews = [carLeftSideView, carTopSideView, carRightSideView]
@@ -127,12 +155,34 @@ class CarSampleViewController: UIViewController {
             carSideView.hidden = shouldHideCarSideView
         }
         
-        defectMarkView.updateForNewSelectedSampleSide(SampleSide(rawValue: Int16(carSideSegmentedControl.selectedSegmentIndex))!)
+        defectMarkView.updateForNewSelectedSampleSide(SampleSide(rawValue: Int16(carSideSegmentedControl.selectedSegmentIndex + 1))!)
     }
     
     private func updateChooseModelButton() {
         let buttonTitle = (selectedModelType != nil) ? selectedModelType!.name : "Choose Model"
         chooseModelButton.setTitle(buttonTitle, forState: UIControlState.Normal)
+    }
+    
+    private func markDefect() {
+        let dmv = defectMarkView
+        guard let mark = dmv.mark, region = dmv.markRegion, plane = dmv.markPlane, side = dmv.markSide, drawingSide = dmv.selectedSampleSide else { return }
+        
+        let defect = Defect.createInManagedObjectContext()
+        defect.type = selectedDefectType
+        defect.severity = DefectSeverity(rawValue: defectSeveritySegmentedControl.selectedSegmentIndex + 1)!
+        defect.region = region
+        defect.plane = plane
+        defect.side = side
+        defect.drawingSide = drawingSide
+        let defectScaledX = Double(mark.x / dmv.frame.width)
+        let defectScaledY = Double(mark.y / dmv.frame.height)
+        defect.setScaledLocation(defectScaledX, y: defectScaledY)
+        
+        sample.addDefect(defect)
+        
+        // Update associated views and view controllers after marking the defect
+        dmv.resetAfterMarkingDefect()
+        markedDefectsTableViewController.tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

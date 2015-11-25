@@ -974,6 +974,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onMarkDefect:" destination="vo7-dz-3eY" eventType="touchUpInside" id="YbY-ZX-V2O"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -1094,6 +1097,7 @@
                         <outlet property="chooseModelButton" destination="a1p-e5-hmc" id="Y92-Fw-yGb"/>
                         <outlet property="defectMarkView" destination="JTp-H2-8q7" id="jyf-5S-bZg"/>
                         <outlet property="defectPickerView" destination="XQP-Y1-M2b" id="CCX-dM-8tu"/>
+                        <outlet property="defectSeveritySegmentedControl" destination="fQK-iw-7Jj" id="dY3-Ut-kcF"/>
                         <outlet property="doneBarButton" destination="fxi-6w-ll8" id="6nj-sE-s4P"/>
                         <outlet property="leftSideSwitch" destination="Qh4-za-k9N" id="a0R-cU-SsM"/>
                         <outlet property="rightSideSwitch" destination="PXn-Og-Koo" id="4R4-hz-jG3"/>

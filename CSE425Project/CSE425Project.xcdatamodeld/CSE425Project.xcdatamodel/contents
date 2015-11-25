@@ -11,7 +11,7 @@
         <relationship name="samples" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Sample" syncable="YES"/>
         <userInfo/>
     </entity>
-    <entity name="Defect" syncable="YES">
+    <entity name="Defect" representedClassName=".Defect" syncable="YES">
         <attribute name="drawingSideInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="locationX" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationY" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>

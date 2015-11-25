@@ -31,7 +31,7 @@ enum DefectRegion: Int16 {
 
 // The severity of the defect
 enum DefectSeverity: Int16 {
-    case Low = 1, Medium, High
+    case Low = 1, Moderate, High
 }
 
 // The spatial plane of the defect
