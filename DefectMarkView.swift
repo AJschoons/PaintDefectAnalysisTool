@@ -10,17 +10,26 @@ import UIKit
 
 class DefectMarkView: UIView {
     
-    private var mark: CGPoint?
+    private let margin: CGFloat = 20
+    
+    private(set) var mark: CGPoint?
     private func setMark(mark: CGPoint?) {
-        guard let mark = mark else { return }
-        
-        if touchableRect.contains(mark) {
+        if mark == nil || touchableRect.contains(mark!) {
             self.mark = mark
+            updateMarkVariablesFromNewMark(mark)
+            updateLabelTextFromMarkVariables()
             setNeedsDisplay()
         }
     }
     
+    private(set) var markRegion: DefectRegion?
+    private(set) var markPlane: DefectPlane?
+    private(set) var markSide: DefectSide?
+    
     private var selectedSampleSide: SampleSide!
+    
+    // used to display information about the defect
+    private var defectLocationInformationLabel: UILabel!
     
     private let roofBezierPath = UIBezierPath()
     private let roofBeizerColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
@@ -40,6 +49,8 @@ class DefectMarkView: UIView {
     
     private var touchableRect: CGRect! // The region we allow the defect to be placed
     
+    // MARK: Initialization
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -53,23 +64,100 @@ class DefectMarkView: UIView {
     private func initialize() {
         multipleTouchEnabled = false
         backgroundColor = UIColor.clearColor()
-    }
-    
-    func updateForNewSelectedSampleSide(sampleSide: SampleSide) {
-        mark = nil
-        selectedSampleSide = sampleSide
-        setNeedsDisplay()
+        
+        // Setup the label
+        defectLocationInformationLabel = UILabel()
+        defectLocationInformationLabel.textColor = UIColor.whiteColor()
+        defectLocationInformationLabel.font = UIFont.systemFontOfSize(18)
+        defectLocationInformationLabel.textAlignment = .Right
+        defectLocationInformationLabel.text = "Some test text"
+        addSubview(defectLocationInformationLabel)
     }
     
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
-    override func drawRect(rect: CGRect) {
-        if touchableRect == nil {
-            let margin: CGFloat = 20
-            touchableRect = CGRect(x: margin, y: margin, width: rect.width - margin*2, height: rect.height - margin*2)
+    // MARK: Functions
+    
+    func updateForNewSelectedSampleSide(sampleSide: SampleSide) {
+        setMark(nil)
+        selectedSampleSide = sampleSide
+        setNeedsDisplay()
+    }
+    
+    private func updateMarkVariablesFromNewMark(mark: CGPoint?) {
+        guard let mark = mark else {
+            markPlane = nil
+            markRegion = nil
+            markSide = nil
+            return
         }
+        
+        if (selectedSampleSide == .Left) {
+            markPlane = .Vertical
+            markRegion = .LeftVertical
+            markSide = .Left
+        } else if (selectedSampleSide == .Right) {
+            markPlane = .Vertical
+            markRegion = .RightVertical
+            markSide = .Right
+        } else {
+            // Top side of sample is currently selected
+            markPlane = .Horizontal
+            
+            // Decide which region the mark is in
+            if (roofBezierPath.containsPoint(mark)) {
+                markRegion = .Roof
+            } else if (hoodBezierPath.containsPoint(mark)) {
+                markRegion = .Hood
+            } else if (deckBezierPath.containsPoint(mark)) {
+                markRegion = .Deck
+            } else {
+                markRegion = nil
+            }
+            
+            // Decide which half the mark is on
+            if (leftSideBezierPath.containsPoint(mark)) {
+                markSide = .Left
+            } else if (rightSideBezierPath.containsPoint(mark)) {
+                markSide = .Right
+            } else {
+                markSide = nil
+            }
+        }
+    }
+    
+    private func updateLabelTextFromMarkVariables() {
+        guard let _ = mark else {
+            defectLocationInformationLabel.text = ""
+            return
+        }
+        
+        let regionText = (markRegion != nil) ? markRegion!.toString() : "N/A"
+        let sideText = (markSide != nil) ? markSide!.toString() : "N/A"
+        
+        if selectedSampleSide == .Top {
+            defectLocationInformationLabel.text = "Region: \(regionText), Side: \(sideText)"
+        } else {
+            // .Left or .Right, so side is implied and need not be displayed
+            defectLocationInformationLabel.text = "Region: \(regionText)"
+        }
+    }
+    
+    // MARK: Drawing
+    
+    override func layoutSubviews() {
+        // Layout the label
+        let labelX = frame.origin.x + margin
+        let labelY = frame.origin.y + margin
+        let labelWidth = frame.width - margin * 2
+        let labelHeight: CGFloat = 20
+        defectLocationInformationLabel.frame = CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight)
+    }
+    
+    override func drawRect(rect: CGRect) {
+        touchableRect = CGRect(x: margin, y: margin, width: rect.width - margin*2, height: rect.height - margin*2)
         
         //
         // Drawing code
@@ -80,7 +168,8 @@ class DefectMarkView: UIView {
         }
         
         if mark != nil {
-            strokeCircleWithCenter(mark!, andColor: currentlySelectedDefectType.getColor())
+            strokeCircleWithCenter(mark!, radius: 13, color: UIColor.whiteColor())
+            strokeCircleWithCenter(mark!, radius: 10, color: currentlySelectedDefectType.getColor())
         }
         
         
@@ -142,38 +231,38 @@ class DefectMarkView: UIView {
         deckBezierPath.fill()
         
         //
-        // left region
+        // right region
         //
         
         let carMiddleLeft = CGPoint(x: deckTopLeft.x, y: (deckTopLeft.y + deckBottomLeft.y) / 2)
         let carMiddleRight = CGPoint(x: hoodTopRight.x, y: (hoodTopRight.y + hoodBottomRight.y) / 2)
         
-        leftSideBezierPath.moveToPoint(carMiddleLeft)
-        leftSideBezierPath.addLineToPoint(deckBottomLeft)
-        leftSideBezierPath.addLineToPoint(roofBottomLeft)
-        leftSideBezierPath.addLineToPoint(roofBottomMiddle)
-        leftSideBezierPath.addLineToPoint(roofBottomRight)
-        leftSideBezierPath.addLineToPoint(hoodBottomRight)
-        leftSideBezierPath.addLineToPoint(carMiddleRight)
-        leftSideBezierPath.closePath()
-        
-        //
-        // right region
-        //
-        
-        rightSideBezierPath.moveToPoint(deckTopLeft)
-        rightSideBezierPath.addLineToPoint(carMiddleLeft)
+        rightSideBezierPath.moveToPoint(carMiddleLeft)
+        rightSideBezierPath.addLineToPoint(deckBottomLeft)
+        rightSideBezierPath.addLineToPoint(roofBottomLeft)
+        rightSideBezierPath.addLineToPoint(roofBottomMiddle)
+        rightSideBezierPath.addLineToPoint(roofBottomRight)
+        rightSideBezierPath.addLineToPoint(hoodBottomRight)
         rightSideBezierPath.addLineToPoint(carMiddleRight)
-        rightSideBezierPath.addLineToPoint(hoodTopRight)
-        rightSideBezierPath.addLineToPoint(roofTopRight)
-        rightSideBezierPath.addLineToPoint(roofTopMiddle)
-        rightSideBezierPath.addLineToPoint(roofTopLeft)
         rightSideBezierPath.closePath()
+        
+        //
+        // left region
+        //
+
+        leftSideBezierPath.moveToPoint(deckTopLeft)
+        leftSideBezierPath.addLineToPoint(carMiddleLeft)
+        leftSideBezierPath.addLineToPoint(carMiddleRight)
+        leftSideBezierPath.addLineToPoint(hoodTopRight)
+        leftSideBezierPath.addLineToPoint(roofTopRight)
+        leftSideBezierPath.addLineToPoint(roofTopMiddle)
+        leftSideBezierPath.addLineToPoint(roofTopLeft)
+        leftSideBezierPath.closePath()
     }
     
-    private func strokeCircleWithCenter(center: CGPoint, andColor color: UIColor) {
+    private func strokeCircleWithCenter(center: CGPoint, radius: CGFloat, color: UIColor) {
         let bp = UIBezierPath()
-        bp.addArcWithCenter(center, radius: 10, startAngle: 0, endAngle: CGFloat(2.0*M_PI), clockwise: false)
+        bp.addArcWithCenter(center, radius: radius, startAngle: 0, endAngle: CGFloat(2.0*M_PI), clockwise: false)
         color.set()
         bp.fill()
     }

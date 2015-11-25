@@ -12,6 +12,21 @@ import UIKit
 // The region on a car the defect is on
 enum DefectRegion: Int16 {
     case LeftVertical = 1, RightVertical, Roof, Hood, Deck
+    
+    func toString() -> String {
+        switch self {
+        case .LeftVertical:
+            return "Left Vertical"
+        case .RightVertical:
+            return "Right Vertical"
+        case .Roof:
+            return "Roof"
+        case .Hood:
+            return "Hood"
+        case .Deck:
+            return "Deck"
+        }
+    }
 }
 
 // The severity of the defect
@@ -27,6 +42,15 @@ enum DefectPlane: Int16 {
 // The left-right side of the car the defect is on
 enum DefectSide: Int16 {
     case Left = 1, Right
+    
+    func toString() -> String {
+        switch self {
+        case .Left:
+            return "Left"
+        case .Right:
+            return "Right"
+        }
+    }
 }
 
 // Location will be a scaled 0-1 value, must be multiplied by corresponding sample size
