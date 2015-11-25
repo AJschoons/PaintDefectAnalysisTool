@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-enum SampleSide: Int {
+enum SampleSide: Int16 {
     case Left = 0, Top, Right
 }
 
@@ -20,6 +20,21 @@ class Sample: NSManagedObject {
     @NSManaged var leftSideDone: Bool
     @NSManaged var rightSideDone: Bool
     @NSManaged var model: ModelType?
+    @NSManaged private var defects: NSOrderedSet
+    
+    func addDefect(defect: Defect) {
+        let defectsSet = mutableOrderedSetValueForKey("defects")
+        defectsSet.addObject(defect)
+    }
+    
+    func removeDefect(defect: Defect) {
+        let defectsSet = mutableOrderedSetValueForKey("defects")
+        defectsSet.removeObject(defect)
+    }
+    
+    func getDefectsArray() -> [Defect] {
+        return defects.array as! [Defect]
+    }
     
     class func createInManagedObjectContext() -> Sample {
         let sample = NSEntityDescription.insertNewObjectForEntityForName(Sample.entityDescriptionName, inManagedObjectContext: CoreDataStack.sharedStack.managedObjectContext) as! Sample

@@ -123,7 +123,7 @@ class CarSampleViewController: UIViewController {
             carSideView.hidden = shouldHideCarSideView
         }
         
-        defectMarkView.updateForNewSelectedSampleSide(SampleSide(rawValue: carSideSegmentedControl.selectedSegmentIndex)!)
+        defectMarkView.updateForNewSelectedSampleSide(SampleSide(rawValue: Int16(carSideSegmentedControl.selectedSegmentIndex))!)
     }
     
     private func updateChooseModelButton() {

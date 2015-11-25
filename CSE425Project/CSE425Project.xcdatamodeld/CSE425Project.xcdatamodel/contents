@@ -12,6 +12,13 @@
         <userInfo/>
     </entity>
     <entity name="Defect" syncable="YES">
+        <attribute name="drawingSideInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="locationX" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationY" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="planeInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="regionInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="severityInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sideInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DefectType" inverseName="defects" inverseEntity="DefectType" syncable="YES"/>
     </entity>
     <entity name="DefectType" representedClassName=".DefectType" syncable="YES">
@@ -30,14 +37,15 @@
     <entity name="Sample" representedClassName=".Sample" syncable="YES">
         <attribute name="leftSideDone" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="rightSideDone" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="defects" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Defect" syncable="YES"/>
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModelType" syncable="YES"/>
     </entity>
     <elements>
         <element name="Analysis" positionX="261" positionY="189" width="128" height="28"/>
-        <element name="Defect" positionX="279" positionY="243" width="128" height="60"/>
+        <element name="Defect" positionX="279" positionY="243" width="128" height="165"/>
         <element name="DefectType" positionX="270" positionY="234" width="128" height="90"/>
         <element name="Factory" positionX="261" positionY="225" width="128" height="90"/>
-        <element name="Sample" positionX="279" positionY="243" width="128" height="28"/>
         <element name="ModelType" positionX="288" positionY="252" width="128" height="60"/>
+        <element name="Sample" positionX="279" positionY="243" width="128" height="105"/>
     </elements>
 </model>

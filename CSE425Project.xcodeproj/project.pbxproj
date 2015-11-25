@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81035DCA1C063F8800D0BA9B /* Defect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81035DC91C063F8800D0BA9B /* Defect.swift */; };
 		8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */; };
 		8106E8561BF6D68100CCB461 /* DefectMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8551BF6D68100CCB461 /* DefectMarkView.swift */; };
 		8106E8581BF7AAD800CCB461 /* DefectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8571BF7AAD800CCB461 /* DefectType.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81035DC91C063F8800D0BA9B /* Defect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defect.swift; sourceTree = "<group>"; };
 		8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8106E8551BF6D68100CCB461 /* DefectMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefectMarkView.swift; path = ../DefectMarkView.swift; sourceTree = "<group>"; };
 		8106E8571BF7AAD800CCB461 /* DefectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefectType.swift; sourceTree = "<group>"; };
@@ -127,8 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				8147359F1BF4FE7C00BF721C /* Analysis.swift */,
-				814735A11BF50D2000BF721C /* Factory.swift */,
+				81035DC91C063F8800D0BA9B /* Defect.swift */,
 				8106E8571BF7AAD800CCB461 /* DefectType.swift */,
+				814735A11BF50D2000BF721C /* Factory.swift */,
 				815700711BFEAF21004F9C86 /* ModelType.swift */,
 				815700731BFECF37004F9C86 /* Sample.swift */,
 			);
@@ -355,6 +358,7 @@
 				814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */,
 				814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */,
 				814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */,
+				81035DCA1C063F8800D0BA9B /* Defect.swift in Sources */,
 				815700741BFECF37004F9C86 /* Sample.swift in Sources */,
 				8106E85A1BF7B6D900CCB461 /* UIColorExtension.swift in Sources */,
 				8106E8581BF7AAD800CCB461 /* DefectType.swift in Sources */,
