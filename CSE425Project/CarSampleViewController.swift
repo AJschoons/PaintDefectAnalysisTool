@@ -10,10 +10,14 @@ import UIKit
 
 class CarSampleViewController: UIViewController {
     
+    // navigation
     @IBOutlet weak var backBarButton: UIBarButtonItem!
     @IBOutlet var doneBarButton: UIBarButtonItem! // not a weak reference so still retained when not shown
     
+    // sample settings
     @IBOutlet weak var chooseModelButton: UIButton!
+    @IBOutlet weak var leftSideSwitch: UISwitch!
+    @IBOutlet weak var rightSideSwitch: UISwitch!
     
     // car selection area
     @IBOutlet weak var carSideSegmentedControl: UISegmentedControl!
@@ -23,15 +27,15 @@ class CarSampleViewController: UIViewController {
     private var carSideViews = [UIView]()
     @IBOutlet weak var defectMarkView: DefectMarkView!
     
+    // editing non-location based info for defect
     @IBOutlet weak var defectPickerView: UIPickerView!
     private var defectTypes = [DefectType]()
-    
-    @IBOutlet weak var leftSideSwitch: UISwitch!
-    @IBOutlet weak var rightSideSwitch: UISwitch!
     
     var analysis: Analysis!
     var sample: Sample!
     var isNewSample: Bool!
+    
+    private var markedDefectsTableViewController: MarkedDefectsTableViewController!
     
     private(set) var selectedDefectType: DefectType!
     private func setSelectedDefectType(defectType: DefectType) {
@@ -137,8 +141,14 @@ class CarSampleViewController: UIViewController {
         if identifier == "carModelPopover" {
             guard let destination = segue.destinationViewController as? CarModelTableViewController else { return }
             destination.delegate = self
+        } else if identifier == "markedDefectsEmbed" {
+            guard let destination = segue.destinationViewController as? MarkedDefectsTableViewController else { return }
+            markedDefectsTableViewController = destination
+            markedDefectsTableViewController.sample = sample
         }
     }
+    
+    
 }
 
 extension CarSampleViewController: CarModelTableViewControllerDelegate {

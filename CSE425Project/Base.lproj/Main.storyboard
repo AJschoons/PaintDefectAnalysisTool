@@ -1034,7 +1034,7 @@
                                         <rect key="frame" x="0.0" y="30" width="738" height="141"/>
                                         <animations/>
                                         <connections>
-                                            <segue destination="jEI-BO-IFQ" kind="embed" id="oCs-6d-6ww"/>
+                                            <segue destination="jEI-BO-IFQ" kind="embed" identifier="markedDefectsEmbed" id="oCs-6d-6ww"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
