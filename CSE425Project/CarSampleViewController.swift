@@ -155,7 +155,13 @@ class CarSampleViewController: UIViewController {
             carSideView.hidden = shouldHideCarSideView
         }
         
-        defectMarkView.updateForNewSelectedSampleSide(SampleSide(rawValue: Int16(carSideSegmentedControl.selectedSegmentIndex + 1))!)
+        let selectedSampleSide = getCurrentlySelectedSampleSide()
+        let defectsForSelectedSampleSide = sample.getDefectsArrayForSampleSide(selectedSampleSide)
+        defectMarkView.updateForNewSelectedSampleSide(selectedSampleSide, defectsForSampleSide: defectsForSelectedSampleSide)
+    }
+    
+    private func getCurrentlySelectedSampleSide() -> SampleSide {
+        return SampleSide(rawValue: Int16(carSideSegmentedControl.selectedSegmentIndex + 1))!
     }
     
     private func updateChooseModelButton() {
@@ -169,7 +175,7 @@ class CarSampleViewController: UIViewController {
         
         let defect = Defect.createInManagedObjectContext()
         defect.type = selectedDefectType
-        defect.severity = DefectSeverity(rawValue: defectSeveritySegmentedControl.selectedSegmentIndex + 1)!
+        defect.severity = getCurrentlySelectedDefectSeverity()
         defect.region = region
         defect.plane = plane
         defect.side = side
@@ -179,10 +185,16 @@ class CarSampleViewController: UIViewController {
         defect.setScaledLocation(defectScaledX, y: defectScaledY)
         
         sample.addDefect(defect)
+        CoreDataStack.sharedStack.saveContext()
         
         // Update associated views and view controllers after marking the defect
         dmv.resetAfterMarkingDefect()
+        dmv.updateWithDefects(sample.getDefectsArrayForSampleSide(getCurrentlySelectedSampleSide()))
         markedDefectsTableViewController.tableView.reloadData()
+    }
+    
+    private func getCurrentlySelectedDefectSeverity() -> DefectSeverity {
+        return DefectSeverity(rawValue: defectSeveritySegmentedControl.selectedSegmentIndex + 1)!
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

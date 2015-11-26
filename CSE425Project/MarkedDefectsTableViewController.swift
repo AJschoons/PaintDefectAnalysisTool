@@ -50,7 +50,11 @@ extension MarkedDefectsTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("markedDefectCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "Marked Defect \(indexPath.row)"
+        
+        let defect = sample.getDefectsArray()[indexPath.row]
+
+        cell.textLabel?.text = "Defect \(indexPath.row + 1), Type: \(defect.type.name), Severity: \(defect.severity.toString()), Sample Side: \(defect.drawingSide.toString()), Region: \(defect.region.toString())"
+        
         return cell;
     }
     

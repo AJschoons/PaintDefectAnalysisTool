@@ -114,7 +114,7 @@ extension AnalysisSamplesTableViewController {
         let sampleModelText = (sample.model != nil) ? sample.model!.name : "N/A"
         let leftSideText = sample.leftSideDone ? "Done" : "Not Done"
         let rightSideText = sample.rightSideDone ? "Done" : "Not Done"
-        cell.textLabel?.text = "Sample \(indexPath.row), Model: \(sampleModelText), Left: \(leftSideText), Right: \(rightSideText)"
+        cell.textLabel?.text = "Sample \(indexPath.row + 1), Model: \(sampleModelText), Left: \(leftSideText), Right: \(rightSideText)"
         
         let isSampleDone = sample.leftSideDone && sample.rightSideDone
         cell.textLabel?.textColor = isSampleDone ? textColorForDone : textColorForNotDone

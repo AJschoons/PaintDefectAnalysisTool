@@ -32,11 +32,31 @@ enum DefectRegion: Int16 {
 // The severity of the defect
 enum DefectSeverity: Int16 {
     case Low = 1, Moderate, High
+    
+    func toString() -> String {
+        switch self {
+        case .Low:
+            return "Low"
+        case .Moderate:
+            return "Moderate"
+        case .High:
+            return "High"
+        }
+    }
 }
 
 // The spatial plane of the defect
 enum DefectPlane: Int16 {
     case Horizontal = 1, Vertical
+    
+    func toString() -> String {
+        switch self {
+        case .Horizontal:
+            return "Horizontal"
+        case .Vertical:
+            return "Vertical"
+        }
+    }
 }
 
 // The left-right side of the car the defect is on

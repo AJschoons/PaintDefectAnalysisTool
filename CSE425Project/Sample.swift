@@ -11,6 +11,17 @@ import CoreData
 
 enum SampleSide: Int16 {
     case Left = 1, Top, Right
+    
+    func toString() -> String {
+        switch self {
+        case .Left:
+            return "Left"
+        case .Top:
+            return "Top"
+        case .Right:
+            return "Right"
+        }
+    }
 }
 
 class Sample: NSManagedObject {
@@ -34,6 +45,10 @@ class Sample: NSManagedObject {
     
     func getDefectsArray() -> [Defect] {
         return defects.array as! [Defect]
+    }
+    
+    func getDefectsArrayForSampleSide(sampleSide: SampleSide) -> [Defect] {
+        return self.getDefectsArray().filter() { $0.drawingSide == sampleSide }
     }
     
     class func createInManagedObjectContext() -> Sample {

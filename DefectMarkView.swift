@@ -11,7 +11,12 @@ import UIKit
 class DefectMarkView: UIView {
     
     private let margin: CGFloat = 20
+    private let defectRadius: CGFloat = 10
     
+    // the previously marked defects to be drawn for the current side
+    private var defects = [Defect]()
+    
+    // the mark for the defect currently being created
     private(set) var mark: CGPoint?
     private func setMark(mark: CGPoint?) {
         if mark == nil || touchableRect.contains(mark!) {
@@ -47,7 +52,7 @@ class DefectMarkView: UIView {
         setNeedsDisplay()
     }
     
-    private var touchableRect: CGRect! // The region we allow the defect to be placed
+    private var touchableRect: CGRect! // The region we allow the defects to be placed
     
     // MARK: Initialization
     
@@ -80,9 +85,14 @@ class DefectMarkView: UIView {
     
     // MARK: Functions
     
-    func updateForNewSelectedSampleSide(sampleSide: SampleSide) {
-        setMark(nil)
+    func updateForNewSelectedSampleSide(sampleSide: SampleSide, defectsForSampleSide defects: [Defect]) {
         selectedSampleSide = sampleSide
+        updateWithDefects(defects)
+        setMark(nil) // calls redraw
+    }
+    
+    func updateWithDefects(defects: [Defect]) {
+        self.defects = defects
         setNeedsDisplay()
     }
     
@@ -167,16 +177,24 @@ class DefectMarkView: UIView {
         // Drawing code
         //
         
+        // if looking at top, draw the defect regions we classified
         if (selectedSampleSide == .Top) {
             strokeTopRegionsInRect(rect)
         }
         
-        if mark != nil {
-            strokeCircleWithCenter(mark!, radius: 13, color: UIColor.whiteColor())
-            strokeCircleWithCenter(mark!, radius: 10, color: currentlySelectedDefectType.getColor())
+        // draw the previous placed defects for this side
+        for defect in defects {
+            let defectScaledLocation = defect.getScaledLocation()
+            let defectX = CGFloat(defectScaledLocation.x * Double(rect.width))
+            let defectY = CGFloat(defectScaledLocation.y * Double(rect.height))
+            strokeCircleWithCenter(CGPoint(x: defectX, y: defectY), radius: defectRadius, color: defect.type.getColor())
         }
         
-        
+        // draw the defect mark currently being placed
+        if mark != nil {
+            strokeCircleWithCenter(mark!, radius: defectRadius + 3, color: UIColor.whiteColor())
+            strokeCircleWithCenter(mark!, radius: defectRadius, color: currentlySelectedDefectType.getColor())
+        }
     }
     
     private func strokeTopRegionsInRect(rect: CGRect) {
