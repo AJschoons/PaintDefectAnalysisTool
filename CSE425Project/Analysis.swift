@@ -15,7 +15,8 @@ class Analysis: NSManagedObject {
     @NSManaged var analyst: String
     @NSManaged private var checkpointString: String
     @NSManaged private var shiftString: String
-    @NSManaged var timeStamp: NSDate
+    @NSManaged var start: NSDate
+    @NSManaged var finish: NSDate?
     @NSManaged private var samples: NSOrderedSet
     
     // factory the analysis was performed in
@@ -54,7 +55,7 @@ class Analysis: NSManagedObject {
     }
     
     func toString() -> String {
-        return "\(dateFormatter.stringFromDate(timeStamp))     \(factory.name)-->\(checkpointString)-->\(shiftString)      Analyst: \(analyst)"
+        return "\(dateFormatter.stringFromDate(start))     \(factory.name)-->\(checkpointString)-->\(shiftString)      Analyst: \(analyst)"
     }
     
     class func createInManagedObjectContext() -> Analysis {
@@ -68,7 +69,7 @@ class Analysis: NSManagedObject {
         let fetchRequest = NSFetchRequest(entityName: Analysis.entityDescriptionName)
         
         // order by time created; most recent are first in array
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "start", ascending: false)]
         
         var analyses = [Analysis]()
         do {

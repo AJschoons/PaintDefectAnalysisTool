@@ -3,8 +3,9 @@
     <entity name="Analysis" representedClassName=".Analysis">
         <attribute name="analyst" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="checkpointString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finish" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="shiftString" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeStamp" optional="YES" attributeType="Date">
+        <attribute name="start" optional="YES" attributeType="Date">
             <userInfo/>
         </attribute>
         <relationship name="factory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Factory" inverseName="analyses" inverseEntity="Factory" syncable="YES"/>
@@ -41,7 +42,7 @@
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModelType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Analysis" positionX="261" positionY="189" width="128" height="28"/>
+        <element name="Analysis" positionX="261" positionY="189" width="128" height="150"/>
         <element name="Defect" positionX="279" positionY="243" width="128" height="165"/>
         <element name="DefectType" positionX="270" positionY="234" width="128" height="90"/>
         <element name="Factory" positionX="261" positionY="225" width="128" height="90"/>

@@ -72,7 +72,7 @@ class HomeViewController: UIViewController {
             newAnalysis.factory = factory
             newAnalysis.checkpoint = checkpoint
             newAnalysis.shift = shift
-            newAnalysis.timeStamp = NSDate() // current date/time
+            newAnalysis.start = NSDate() // current date/time
             CoreDataStack.sharedStack.saveContext()
             
             destination.analysis = newAnalysis

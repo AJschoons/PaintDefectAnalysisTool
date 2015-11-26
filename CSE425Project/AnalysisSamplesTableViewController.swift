@@ -11,12 +11,19 @@ import UIKit
 class AnalysisSamplesTableViewController: UITableViewController {
     
     // analysis description labels
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var finishDateLabel: UILabel!
     @IBOutlet weak var factoryLabel: UILabel!
     @IBOutlet weak var analystLabel: UILabel!
     @IBOutlet weak var checkpointLabel: UILabel!
     @IBOutlet weak var shiftLabel: UILabel!
 
+    // bar buttons are strong references so the ones that aren't showing aren't lost
+    @IBOutlet var addBarButton: UIBarButtonItem!
+    @IBOutlet var spacerBarButton: UIBarButtonItem!
+    @IBOutlet var printReportBarButton: UIBarButtonItem!
+    @IBOutlet var finishBarButton: UIBarButtonItem!
+    
     var analysis: Analysis!
     
     // used to store which sample was selected so it can be passed in segue
@@ -26,20 +33,40 @@ class AnalysisSamplesTableViewController: UITableViewController {
     let textColorForDone = UIColor(rgba: "#16A085")
     let textColorForNotDone = UIColor.redColor()
     
+    @IBAction func onFinishButton(sender: AnyObject) {
+        analysis.finish = NSDate()
+        CoreDataStack.sharedStack.saveContext()
+        updateAnalysisDescriptionLabels()
+        setRightBarButtons()
+    }
+    
+    @IBAction func onPrintReportButton(sender: AnyObject) {
+        
+    }
+    
     override func viewDidLoad() {
         updateAnalysisDescriptionLabels()
+        setRightBarButtons()
     }
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
     }
     
-    func updateAnalysisDescriptionLabels() {
-        dateLabel.text = "Date: \(dateFormatter.stringFromDate(analysis.timeStamp))"
+    private func updateAnalysisDescriptionLabels() {
+        startDateLabel.text = "Start: \(dateFormatter.stringFromDate(analysis.start))"
         factoryLabel.text = "Factory: \(analysis.factory.name)"
         analystLabel.text = "Analyst: \(analysis.analyst)"
-        checkpointLabel.text = "Checkpoint: \(analysis.checkpoint)"
+        checkpointLabel.text = "Checkpoint: \(analysis.checkpoint.rawValue)"
         shiftLabel.text = "Shift: \(analysis.shift)"
+        
+        let finishTimeText = (analysis.finish != nil) ? dateFormatter.stringFromDate(analysis.finish!) : "(In progress)"
+        finishDateLabel.text = "Finish: \(finishTimeText)"
+    }
+    
+    private func setRightBarButtons() {
+        let buttonToShow = (analysis.finish == nil) ? finishBarButton : printReportBarButton
+        navigationItem.rightBarButtonItems = [addBarButton, spacerBarButton, buttonToShow]
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

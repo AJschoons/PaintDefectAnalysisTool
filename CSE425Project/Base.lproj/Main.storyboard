@@ -1167,8 +1167,15 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="90D-46-2ov">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="42"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlJ-fJ-P5Q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="42"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlJ-fJ-P5Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-O6-Tfr">
+                                                    <rect key="frame" x="384" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1270,18 +1277,32 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title=" " id="sGx-EW-7dd"/>
-                            <barButtonItem title="Print Report" id="sPY-Iq-Rzf"/>
+                            <barButtonItem title="Print Report" id="sPY-Iq-Rzf">
+                                <connections>
+                                    <action selector="onPrintReportButton:" destination="zSu-RN-CDm" id="Znj-Pk-F1G"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Finish" id="7xk-pG-IAZ">
+                                <connections>
+                                    <action selector="onFinishButton:" destination="zSu-RN-CDm" id="Pf7-fe-LOq"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="addBarButton" destination="q5k-Dx-Jlf" id="H1g-Ht-TLT"/>
                         <outlet property="analystLabel" destination="pMg-HD-ZjK" id="DZo-Yi-ybK"/>
                         <outlet property="checkpointLabel" destination="qdS-Tj-bjc" id="kCv-Xn-W88"/>
-                        <outlet property="dateLabel" destination="vlJ-fJ-P5Q" id="CIc-Zy-ff1"/>
                         <outlet property="factoryLabel" destination="PRn-0N-sJD" id="ki7-Cb-dym"/>
+                        <outlet property="finishBarButton" destination="7xk-pG-IAZ" id="cM4-46-TiY"/>
+                        <outlet property="finishDateLabel" destination="n6z-O6-Tfr" id="aVT-Br-pM9"/>
+                        <outlet property="printReportBarButton" destination="sPY-Iq-Rzf" id="4OL-lc-nB6"/>
                         <outlet property="shiftLabel" destination="tmt-gS-J7c" id="Eml-a5-j9L"/>
+                        <outlet property="spacerBarButton" destination="sGx-EW-7dd" id="cee-du-v8x"/>
+                        <outlet property="startDateLabel" destination="vlJ-fJ-P5Q" id="5el-sn-EBi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RM-zp-e8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
