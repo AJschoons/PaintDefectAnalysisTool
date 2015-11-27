@@ -1311,11 +1311,19 @@
                                 <action selector="onBackButton:" destination="Hjh-Yr-8fz" id="477-si-ruK"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="09V-Ej-l18">
-                            <connections>
-                                <action selector="onSendButton:" destination="Hjh-Yr-8fz" id="EHb-ak-gbv"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Send" id="09V-Ej-l18">
+                                <connections>
+                                    <action selector="onSendButton:" destination="Hjh-Yr-8fz" id="EHb-ak-gbv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title=" " id="enD-fD-p9Y" userLabel="Spacer"/>
+                            <barButtonItem title="Save to Disk" id="hlc-tb-MsA">
+                                <connections>
+                                    <action selector="onSave:" destination="Hjh-Yr-8fz" id="eYL-GE-2yp"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>

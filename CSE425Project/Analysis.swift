@@ -58,6 +58,27 @@ class Analysis: NSManagedObject {
         return "\(dateFormatter.stringFromDate(start))     \(factory.name)-->\(checkpointString)-->\(shiftString)      Analyst: \(analyst)"
     }
     
+    func toFilenameString() -> String {
+        return "\(filenameDateFormatter.stringFromDate(start))_\(factory.name)_\(checkpointString)_\(shiftString)"
+    }
+    
+    func toCsvString() -> String {
+        var csvString = ""
+        csvString += "Factory,Checkpoint,Shift,Analyst,Start,Finish\n"
+        csvString += "\(factory.name),\(checkpoint.rawValue),\(shift.rawValue),\(analyst),\"\(dateFormatter.stringFromDate(start))\",\"\(dateFormatter.stringFromDate(finish!))\"\n"
+        csvString += ",,,,,\n"
+        csvString += "Defects,,,,,\n"
+        csvString += "Type,Severity,Model,Region,Plane,Side\n"
+        
+        for sample in getSamplesArray() {
+            for defect in sample.getDefectsArray() {
+                csvString += "\(defect.type.name),\(defect.severity.toString()),\(sample.model!.name),\(defect.region.toString()),\(defect.plane.toString()),\(defect.side.toString())\n"
+            }
+        }
+        
+        return csvString
+    }
+    
     class func createInManagedObjectContext() -> Analysis {
         let analysis = NSEntityDescription.insertNewObjectForEntityForName(Analysis.entityDescriptionName, inManagedObjectContext: CoreDataStack.sharedStack.managedObjectContext) as! Analysis
         CoreDataStack.sharedStack.saveContext()

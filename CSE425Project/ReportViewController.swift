@@ -29,14 +29,26 @@ class ReportViewController: UIViewController {
     
     var analysis: Analysis!
     
-    private var allDefects = [Defect]()
-    
     @IBAction func onBackButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func onSendButton(sender: AnyObject) {
         
+    }
+    
+    @IBAction func onSave(sender: AnyObject) {
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0]
+        let outputFilePath = "\(documentDirectory)/\(analysis.toFilenameString()).csv"
+        print("saving to filepath:\(outputFilePath)")
+        
+        let csvString = analysis.toCsvString()
+        
+        do {
+            try csvString.writeToFile(outputFilePath, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch {
+            print("Couldn't save csv to disk")
+        }
     }
     
     override func viewDidLoad() {
@@ -73,16 +85,11 @@ class ReportViewController: UIViewController {
         defectMarkViewTop.updateWithDefects(topSideDefects)
         defectMarkViewRight.updateWithDefects(rightSideDefects)
         
-        // combine all defects into a single array to send upon user interation
-        allDefects.appendContentsOf(leftSideDefects)
-        allDefects.appendContentsOf(topSideDefects)
-        allDefects.appendContentsOf(rightSideDefects)
-        
         // 
         // get data for report summary labels and set them
         //
         
-        let numberOfDefects = allDefects.count
+        let numberOfDefects = leftSideDefects.count + topSideDefects.count + rightSideDefects.count
         let numberOfUnits = samples.count
         let defectsPerUnit = Float(numberOfDefects) / Float(numberOfUnits)
         
