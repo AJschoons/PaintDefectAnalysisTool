@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81035DCA1C063F8800D0BA9B /* Defect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81035DC91C063F8800D0BA9B /* Defect.swift */; };
+		81035DCD1C07C5DE00D0BA9B /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81035DCC1C07C5DE00D0BA9B /* ReportViewController.swift */; };
 		8106E84E1BF5939B00CCB461 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */; };
 		8106E8561BF6D68100CCB461 /* DefectMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8551BF6D68100CCB461 /* DefectMarkView.swift */; };
 		8106E8581BF7AAD800CCB461 /* DefectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106E8571BF7AAD800CCB461 /* DefectType.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		81035DC91C063F8800D0BA9B /* Defect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defect.swift; sourceTree = "<group>"; };
+		81035DCC1C07C5DE00D0BA9B /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		8106E84D1BF5939B00CCB461 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8106E8551BF6D68100CCB461 /* DefectMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefectMarkView.swift; path = ../DefectMarkView.swift; sourceTree = "<group>"; };
 		8106E8571BF7AAD800CCB461 /* DefectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefectType.swift; sourceTree = "<group>"; };
@@ -112,6 +114,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81035DCB1C07C5B000D0BA9B /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				81035DCC1C07C5DE00D0BA9B /* ReportViewController.swift */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
+		81035DCE1C07EB0000D0BA9B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				8106E8551BF6D68100CCB461 /* DefectMarkView.swift */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
 		814735A31BF5366E00BF721C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				814735931BF31C4C00BF721C /* CarSampleViewController.swift */,
-				8106E8551BF6D68100CCB461 /* DefectMarkView.swift */,
 				8147359B1BF43AD400BF721C /* CarModelTableViewController.swift */,
 				814735991BF3A08500BF721C /* MarkedDefectsTableViewController.swift */,
 			);
@@ -190,11 +207,13 @@
 			children = (
 				81D3259B1BF2647C001CCD1C /* AppDelegate.swift */,
 				81D325A41BF2647C001CCD1C /* Main.storyboard */,
+				81035DCE1C07EB0000D0BA9B /* Custom Views */,
 				814735A51BF536BB00BF721C /* Managers */,
 				814735A41BF536AC00BF721C /* Models */,
 				814735A31BF5366E00BF721C /* Home */,
 				814735A61BF536F200BF721C /* Analysis Samples */,
 				814735A71BF5372100BF721C /* Sample */,
+				81035DCB1C07C5B000D0BA9B /* Report */,
 				81D325A71BF2647C001CCD1C /* Assets.xcassets */,
 				81D325A91BF2647C001CCD1C /* LaunchScreen.storyboard */,
 				81D325AC1BF2647C001CCD1C /* Info.plist */,
@@ -357,6 +376,7 @@
 				8147358E1BF2C26C00BF721C /* NewAnalysisTableViewController.swift in Sources */,
 				814735A91BF53F7700BF721C /* FactoryTableViewController.swift in Sources */,
 				814735AD1BF57AF000BF721C /* ShiftTableViewController.swift in Sources */,
+				81035DCD1C07C5DE00D0BA9B /* ReportViewController.swift in Sources */,
 				814735941BF31C4C00BF721C /* CarSampleViewController.swift in Sources */,
 				81035DCA1C063F8800D0BA9B /* Defect.swift in Sources */,
 				815700741BFECF37004F9C86 /* Sample.swift in Sources */,

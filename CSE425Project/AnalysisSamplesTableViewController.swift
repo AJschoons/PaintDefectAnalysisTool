@@ -90,6 +90,12 @@ class AnalysisSamplesTableViewController: UITableViewController {
             destination.analysis = analysis
             destination.sample = selectedSample
             selectedSample = nil
+            
+        } else if identifier == "createReport" {
+            guard let navController = segue.destinationViewController as? UINavigationController else { return }
+            guard let destination = navController.viewControllers[0] as? ReportViewController else { return }
+            
+            destination.analysis = analysis
         }
     }
 }

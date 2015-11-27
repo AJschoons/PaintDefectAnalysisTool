@@ -498,7 +498,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey1-ZK-bkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4119" y="184"/>
+            <point key="canvasLocation" x="5098.5" y="183.5"/>
         </scene>
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
@@ -758,7 +758,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="Uyh-mg-Lc9" secondAttribute="bottom" id="yaO-u1-99Z"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-H2-8q7" userLabel="Defect Marking" customClass="DefectMarkView" customModule="CSE425Project" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-H2-8q7" userLabel="Defect Marking" customClass="DefectMarkDrawingView" customModule="CSE425Project" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="738" height="320"/>
                                                                 <animations/>
                                                             </view>
@@ -1095,7 +1095,7 @@
                         <outlet property="carSideSegmentedControl" destination="Tif-WO-Wrr" id="tSL-W9-AqM"/>
                         <outlet property="carTopSideView" destination="u5Y-Pu-L13" id="kNj-LC-7b8"/>
                         <outlet property="chooseModelButton" destination="a1p-e5-hmc" id="Y92-Fw-yGb"/>
-                        <outlet property="defectMarkView" destination="JTp-H2-8q7" id="jyf-5S-bZg"/>
+                        <outlet property="defectMarkDrawingView" destination="JTp-H2-8q7" id="TdG-hi-wyy"/>
                         <outlet property="defectPickerView" destination="XQP-Y1-M2b" id="CCX-dM-8tu"/>
                         <outlet property="defectSeveritySegmentedControl" destination="fQK-iw-7Jj" id="dY3-Ut-kcF"/>
                         <outlet property="doneBarButton" destination="fxi-6w-ll8" id="6nj-sE-s4P"/>
@@ -1147,6 +1147,193 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TL-Qw-s4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4128" y="1658.5"/>
+        </scene>
+        <!--Report-->
+        <scene sceneID="pBx-ur-gke">
+            <objects>
+                <viewController id="Hjh-Yr-8fz" customClass="ReportViewController" customModule="CSE425Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k3D-mg-6s5"/>
+                        <viewControllerLayoutGuide type="bottom" id="aEt-pG-jHB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XQS-R4-0rN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npq-QQ-suf" userLabel="Report">
+                                <rect key="frame" x="15" y="79" width="738" height="930"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjw-U1-FbZ" userLabel="Information">
+                                        <rect key="frame" x="0.0" y="0.0" width="738" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ymP-Pr-yEx">
+                                                <rect key="frame" x="0.0" y="0.0" width="738" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQA-h2-kys">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="40"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-pu-DpF">
+                                                        <rect key="frame" x="0.0" y="40" width="738" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defects in Report:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGJ-U1-HDa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="246" height="40"/>
+                                                                <animations/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units in Report:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-wQ-foG">
+                                                                <rect key="frame" x="246" y="0.0" width="246" height="40"/>
+                                                                <animations/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defects Per Unit:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-kC-PUz">
+                                                                <rect key="frame" x="492" y="0.0" width="246" height="40"/>
+                                                                <animations/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <animations/>
+                                                    </stackView>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ymP-Pr-yEx" firstAttribute="leading" secondItem="gjw-U1-FbZ" secondAttribute="leading" id="42K-GZ-XFm"/>
+                                            <constraint firstItem="ymP-Pr-yEx" firstAttribute="top" secondItem="gjw-U1-FbZ" secondAttribute="top" id="Lvc-1m-WmG"/>
+                                            <constraint firstAttribute="height" constant="80" id="eQE-jw-HZh"/>
+                                            <constraint firstAttribute="bottom" secondItem="ymP-Pr-yEx" secondAttribute="bottom" id="i90-hW-OOQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ymP-Pr-yEx" secondAttribute="trailing" id="uZk-g1-KpD"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-lD-YRN" userLabel="Images">
+                                        <rect key="frame" x="0.0" y="80" width="738" height="850"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFY-lj-Tnt" userLabel="Left">
+                                                <rect key="frame" x="0.0" y="0.0" width="738" height="283.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carLeft" translatesAutoresizingMaskIntoConstraints="NO" id="ru7-UH-PsJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="283.5"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="ru7-UH-PsJ" firstAttribute="top" secondItem="cFY-lj-Tnt" secondAttribute="top" id="EcP-He-4k8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ru7-UH-PsJ" secondAttribute="trailing" id="qxw-Mb-1Lt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ru7-UH-PsJ" secondAttribute="bottom" id="u9k-ve-cBr"/>
+                                                    <constraint firstItem="ru7-UH-PsJ" firstAttribute="leading" secondItem="cFY-lj-Tnt" secondAttribute="leading" id="uCd-K3-Im6"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qj-c0-GhW" userLabel="Top">
+                                                <rect key="frame" x="0.0" y="283.5" width="738" height="283"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carTop" translatesAutoresizingMaskIntoConstraints="NO" id="0ZD-sy-YPE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="283"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="0ZD-sy-YPE" firstAttribute="top" secondItem="9Qj-c0-GhW" secondAttribute="top" id="EQT-Cb-Y4F"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0ZD-sy-YPE" secondAttribute="trailing" id="XHy-bZ-3aQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0ZD-sy-YPE" secondAttribute="bottom" id="mmx-iF-VZO"/>
+                                                    <constraint firstItem="0ZD-sy-YPE" firstAttribute="leading" secondItem="9Qj-c0-GhW" secondAttribute="leading" id="sMQ-aF-b7q"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6II-H0-H2l" userLabel="Right">
+                                                <rect key="frame" x="0.0" y="566.5" width="738" height="283.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carRight" translatesAutoresizingMaskIntoConstraints="NO" id="LuM-Hr-KTe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="738" height="283.5"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="738" id="qUw-ik-fxN"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="LuM-Hr-KTe" secondAttribute="bottom" id="UM8-yU-g38"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LuM-Hr-KTe" secondAttribute="trailing" id="coL-7K-Bbz"/>
+                                                    <constraint firstItem="LuM-Hr-KTe" firstAttribute="leading" secondItem="6II-H0-H2l" secondAttribute="leading" id="iZD-5P-1rk"/>
+                                                    <constraint firstItem="LuM-Hr-KTe" firstAttribute="top" secondItem="6II-H0-H2l" secondAttribute="top" id="q9O-qb-2p7"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gjw-U1-FbZ" secondAttribute="trailing" id="0lg-WF-EtR"/>
+                                    <constraint firstItem="gjw-U1-FbZ" firstAttribute="leading" secondItem="npq-QQ-suf" secondAttribute="leading" id="2B5-PR-70h"/>
+                                    <constraint firstItem="tJ5-lD-YRN" firstAttribute="top" secondItem="gjw-U1-FbZ" secondAttribute="bottom" id="7z5-HW-r3W"/>
+                                    <constraint firstAttribute="bottom" secondItem="tJ5-lD-YRN" secondAttribute="bottom" id="9cZ-UG-2ug"/>
+                                    <constraint firstItem="tJ5-lD-YRN" firstAttribute="leading" secondItem="npq-QQ-suf" secondAttribute="leading" id="YL1-fp-42S"/>
+                                    <constraint firstAttribute="trailing" secondItem="tJ5-lD-YRN" secondAttribute="trailing" id="p1S-NG-CcS"/>
+                                    <constraint firstItem="gjw-U1-FbZ" firstAttribute="top" secondItem="npq-QQ-suf" secondAttribute="top" id="r9y-nx-PwN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="npq-QQ-suf" secondAttribute="trailing" constant="15" id="KSD-ZH-XrY"/>
+                            <constraint firstItem="npq-QQ-suf" firstAttribute="top" secondItem="k3D-mg-6s5" secondAttribute="bottom" constant="15" id="SLZ-5N-8bq"/>
+                            <constraint firstItem="npq-QQ-suf" firstAttribute="leading" secondItem="XQS-R4-0rN" secondAttribute="leading" constant="15" id="clu-Ha-ukS"/>
+                            <constraint firstItem="aEt-pG-jHB" firstAttribute="top" secondItem="npq-QQ-suf" secondAttribute="bottom" constant="15" id="mpP-7a-gvN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Report" id="dCE-QT-4zy">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Xtm-Zi-dwu">
+                            <connections>
+                                <action selector="onBackButton:" destination="Hjh-Yr-8fz" id="477-si-ruK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="09V-Ej-l18">
+                            <connections>
+                                <action selector="onSendButton:" destination="Hjh-Yr-8fz" id="EHb-ak-gbv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="carLeftImageView" destination="ru7-UH-PsJ" id="Ul6-Bp-Jq0"/>
+                        <outlet property="carLeftView" destination="cFY-lj-Tnt" id="EmU-Qn-9cm"/>
+                        <outlet property="carRightImageView" destination="LuM-Hr-KTe" id="wO1-ZW-LBd"/>
+                        <outlet property="carRightView" destination="6II-H0-H2l" id="yu1-sv-ZvV"/>
+                        <outlet property="carTopImageView" destination="0ZD-sy-YPE" id="OKb-Ki-xK7"/>
+                        <outlet property="carTopView" destination="9Qj-c0-GhW" id="qtz-Yt-pYa"/>
+                        <outlet property="defectsInReportLabel" destination="iGJ-U1-HDa" id="PXp-UK-lSz"/>
+                        <outlet property="defectsPerUnitLabel" destination="zaQ-kC-PUz" id="BFS-tq-8Zh"/>
+                        <outlet property="unitsInReportLabel" destination="rhG-wQ-foG" id="k0r-Ka-HYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83D-Dg-lpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2946" y="-374"/>
         </scene>
         <!--Analysis Samples-->
         <scene sceneID="Tvi-Y7-ih8">
@@ -1277,9 +1464,10 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title=" " id="sGx-EW-7dd"/>
-                            <barButtonItem title="Print Report" id="sPY-Iq-Rzf">
+                            <barButtonItem title="Create Report" id="sPY-Iq-Rzf">
                                 <connections>
                                     <action selector="onPrintReportButton:" destination="zSu-RN-CDm" id="Znj-Pk-F1G"/>
+                                    <segue destination="Sm6-vX-x1d" kind="presentation" identifier="createReport" id="zJz-0t-Btc"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Finish" id="7xk-pG-IAZ">
@@ -1680,6 +1868,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUC-X1-6tT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3148" y="877"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l4P-qI-9vi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sm6-vX-x1d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="71u-Zp-kNu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hjh-Yr-8fz" kind="relationship" relationship="rootViewController" id="D2p-jp-SRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1kJ-X7-TDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="-374"/>
         </scene>
     </scenes>
     <resources>

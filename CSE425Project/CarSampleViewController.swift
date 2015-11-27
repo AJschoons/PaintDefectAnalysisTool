@@ -25,7 +25,7 @@ class CarSampleViewController: UIViewController {
     @IBOutlet weak var carTopSideView: UIView!
     @IBOutlet weak var carRightSideView: UIView!
     private var carSideViews = [UIView]()
-    @IBOutlet weak var defectMarkView: DefectMarkView!
+    @IBOutlet weak var defectMarkDrawingView: DefectMarkDrawingView!
     
     // editing non-location based info for defect
     @IBOutlet weak var defectPickerView: UIPickerView!
@@ -41,7 +41,7 @@ class CarSampleViewController: UIViewController {
     private(set) var selectedDefectType: DefectType!
     private func setSelectedDefectType(defectType: DefectType) {
         selectedDefectType = defectType
-        defectMarkView.setCurrentlySelectedDefectType(defectType)
+        defectMarkDrawingView.setCurrentlySelectedDefectType(defectType)
     }
     
     private var selectedModelType: ModelType?
@@ -92,8 +92,8 @@ class CarSampleViewController: UIViewController {
     
     @IBAction func onMarkDefect(sender: AnyObject) {
         let sampleModelNotSelected = (sample.model == nil)
-        let defectNotMarked = (defectMarkView.mark == nil)
-        let defectMarkRegionInvalid = (defectMarkView.markRegion == nil)
+        let defectNotMarked = (defectMarkDrawingView.mark == nil)
+        let defectMarkRegionInvalid = (defectMarkDrawingView.markRegion == nil)
         
         guard !sampleModelNotSelected && !defectNotMarked && !defectMarkRegionInvalid else {
             let alertTitle = "Unable To Mark Defect"
@@ -157,7 +157,7 @@ class CarSampleViewController: UIViewController {
         
         let selectedSampleSide = getCurrentlySelectedSampleSide()
         let defectsForSelectedSampleSide = sample.getDefectsArrayForSampleSide(selectedSampleSide)
-        defectMarkView.updateForNewSelectedSampleSide(selectedSampleSide, defectsForSampleSide: defectsForSelectedSampleSide)
+        defectMarkDrawingView.updateForNewSelectedSampleSide(selectedSampleSide, defectsForSampleSide: defectsForSelectedSampleSide)
     }
     
     private func getCurrentlySelectedSampleSide() -> SampleSide {
@@ -170,8 +170,8 @@ class CarSampleViewController: UIViewController {
     }
     
     private func markDefect() {
-        let dmv = defectMarkView
-        guard let mark = dmv.mark, region = dmv.markRegion, plane = dmv.markPlane, side = dmv.markSide, drawingSide = dmv.selectedSampleSide else { return }
+        let dmdv = defectMarkDrawingView
+        guard let mark = dmdv.mark, region = dmdv.markRegion, plane = dmdv.markPlane, side = dmdv.markSide, drawingSide = dmdv.selectedSampleSide else { return }
         
         let defect = Defect.createInManagedObjectContext()
         defect.type = selectedDefectType
@@ -180,16 +180,16 @@ class CarSampleViewController: UIViewController {
         defect.plane = plane
         defect.side = side
         defect.drawingSide = drawingSide
-        let defectScaledX = Double(mark.x / dmv.frame.width)
-        let defectScaledY = Double(mark.y / dmv.frame.height)
+        let defectScaledX = Double(mark.x / dmdv.frame.width)
+        let defectScaledY = Double(mark.y / dmdv.frame.height)
         defect.setScaledLocation(defectScaledX, y: defectScaledY)
         
         sample.addDefect(defect)
         CoreDataStack.sharedStack.saveContext()
         
         // Update associated views and view controllers after marking the defect
-        dmv.resetAfterMarkingDefect()
-        dmv.updateWithDefects(sample.getDefectsArrayForSampleSide(getCurrentlySelectedSampleSide()))
+        dmdv.resetAfterMarkingDefect()
+        dmdv.updateWithDefects(sample.getDefectsArrayForSampleSide(getCurrentlySelectedSampleSide()))
         markedDefectsTableViewController.tableView.reloadData()
     }
     

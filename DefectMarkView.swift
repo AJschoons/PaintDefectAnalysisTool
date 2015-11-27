@@ -8,13 +8,96 @@
 
 import UIKit
 
+// Used to correctly place a DefectMarkView over a car image that is aspect-fitted in an image view
+func frameForImage(image: UIImage, inAspectFitImageView imageView: UIImageView) -> CGRect {
+    let imageRatio = image.size.width / image.size.height
+    let viewRatio = imageView.frame.size.width / imageView.frame.size.height
+    
+    if imageRatio < viewRatio {
+        let scale = imageView.frame.size.height / image.size.height
+        let width = scale * image.size.width
+        let topLeftX = (imageView.frame.size.width - width) / 2
+        return CGRect(x: topLeftX, y: 0, width: width, height: imageView.frame.size.height)
+    } else {
+        let scale = imageView.frame.size.width / image.size.width
+        let height = scale * image.size.height
+        let topLeftY = (imageView.frame.size.height - height) / 2
+        return CGRect(x: 0, y: topLeftY, width: imageView.frame.size.width, height: height)
+    }
+}
+
+// MARK: class DefectMarkView
 class DefectMarkView: UIView {
     
-    private let margin: CGFloat = 20
-    private let defectRadius: CGFloat = 10
+    var defectRadius: CGFloat = 10
     
-    // the previously marked defects to be drawn for the current side
+    // the defects to be drawn
     private var defects = [Defect]()
+    
+    // MARK: Initialization
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    
+    private func initialize() {
+        multipleTouchEnabled = false
+        backgroundColor = UIColor.clearColor()
+    }
+    
+    // MARK: Functions
+    
+    func updateWithDefects(defects: [Defect]) {
+        self.defects = defects
+        setNeedsDisplay()
+    }
+    
+    // MARK: Drawing
+    
+    override func drawRect(rect: CGRect) {
+        
+        //
+        // Drawing code
+        //
+        
+        // draw the defects
+        for defect in defects {
+            let defectScaledLocation = defect.getScaledLocation()
+            let defectX = CGFloat(defectScaledLocation.x * Double(rect.width))
+            let defectY = CGFloat(defectScaledLocation.y * Double(rect.height))
+            strokeCircleWithCenter(CGPoint(x: defectX, y: defectY), radius: defectRadius, color: defect.type.getColor())
+        }
+    }
+    
+    private func strokeCircleWithCenter(center: CGPoint, radius: CGFloat, color: UIColor) {
+        let bp = UIBezierPath()
+        bp.addArcWithCenter(center, radius: radius, startAngle: 0, endAngle: CGFloat(2.0*M_PI), clockwise: false)
+        color.set()
+        bp.fill()
+    }
+}
+
+//
+//  DefectMarkDrawingView.swift
+//  CSE425Project
+//
+//  Created by adam on 11/26/15.
+//  Copyright © 2015 Adam Schoonmaker. All rights reserved.
+//
+
+import UIKit
+
+// MARK: subclass DefectMarkDrawingView
+// in the same file so "private" access is shared b/w the two
+class DefectMarkDrawingView: DefectMarkView {
+    
+    private let margin: CGFloat = 20
     
     // the mark for the defect currently being created
     private(set) var mark: CGPoint?
@@ -66,16 +149,13 @@ class DefectMarkView: UIView {
         initialize()
     }
     
-    private func initialize() {
-        multipleTouchEnabled = false
-        backgroundColor = UIColor.clearColor()
-        
+    private override func initialize() {
+        super.initialize()
         // Setup the label
         defectLocationInformationLabel = UILabel()
         defectLocationInformationLabel.textColor = UIColor.whiteColor()
         defectLocationInformationLabel.font = UIFont.systemFontOfSize(18)
         defectLocationInformationLabel.textAlignment = .Right
-        defectLocationInformationLabel.text = "Some test text"
         addSubview(defectLocationInformationLabel)
     }
     
@@ -89,11 +169,6 @@ class DefectMarkView: UIView {
         selectedSampleSide = sampleSide
         updateWithDefects(defects)
         setMark(nil) // calls redraw
-    }
-    
-    func updateWithDefects(defects: [Defect]) {
-        self.defects = defects
-        setNeedsDisplay()
     }
     
     func resetAfterMarkingDefect() {
@@ -183,12 +258,7 @@ class DefectMarkView: UIView {
         }
         
         // draw the previous placed defects for this side
-        for defect in defects {
-            let defectScaledLocation = defect.getScaledLocation()
-            let defectX = CGFloat(defectScaledLocation.x * Double(rect.width))
-            let defectY = CGFloat(defectScaledLocation.y * Double(rect.height))
-            strokeCircleWithCenter(CGPoint(x: defectX, y: defectY), radius: defectRadius, color: defect.type.getColor())
-        }
+        super.drawRect(rect)
         
         // draw the defect mark currently being placed
         if mark != nil {
@@ -271,7 +341,7 @@ class DefectMarkView: UIView {
         //
         // left region
         //
-
+        
         leftSideBezierPath.moveToPoint(deckTopLeft)
         leftSideBezierPath.addLineToPoint(carMiddleLeft)
         leftSideBezierPath.addLineToPoint(carMiddleRight)
@@ -280,13 +350,6 @@ class DefectMarkView: UIView {
         leftSideBezierPath.addLineToPoint(roofTopMiddle)
         leftSideBezierPath.addLineToPoint(roofTopLeft)
         leftSideBezierPath.closePath()
-    }
-    
-    private func strokeCircleWithCenter(center: CGPoint, radius: CGFloat, color: UIColor) {
-        let bp = UIBezierPath()
-        bp.addArcWithCenter(center, radius: radius, startAngle: 0, endAngle: CGFloat(2.0*M_PI), clockwise: false)
-        color.set()
-        bp.fill()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
