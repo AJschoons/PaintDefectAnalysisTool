@@ -30,7 +30,7 @@ class AnalysisSamplesTableViewController: UITableViewController {
     // should be reset whenever passed to the view controller needing it
     private var selectedSample: Sample?
     
-    let textColorForDone = UIColor(rgba: "#16A085")
+    let textColorForDone = positiveButtonBackground
     let textColorForNotDone = UIColor.redColor()
     
     @IBAction func onFinishButton(sender: AnyObject) {
@@ -40,11 +40,18 @@ class AnalysisSamplesTableViewController: UITableViewController {
         setRightBarButtons()
     }
     
+    @IBAction func onBackButton(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
     @IBAction func onPrintReportButton(sender: AnyObject) {
         
     }
     
     override func viewDidLoad() {
+        let barButtonBackgroundHidden = UIImage(named: "barButtonBackgroundHidden")
+        spacerBarButton.setBackgroundImage(barButtonBackgroundHidden, forState: UIControlState.Disabled, barMetrics: UIBarMetrics.Default)
+        spacerBarButton.enabled = false
         updateAnalysisDescriptionLabels()
         setRightBarButtons()
     }
@@ -65,8 +72,12 @@ class AnalysisSamplesTableViewController: UITableViewController {
     }
     
     private func setRightBarButtons() {
-        let buttonToShow = (analysis.finish == nil) ? finishBarButton : printReportBarButton
-        navigationItem.rightBarButtonItems = [addBarButton, spacerBarButton, buttonToShow]
+        let analysisIsFinished = (analysis.finish != nil)
+        if analysisIsFinished {
+            navigationItem.rightBarButtonItems = [printReportBarButton]
+        } else {
+            navigationItem.rightBarButtonItems = [addBarButton, spacerBarButton, finishBarButton]
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -74,14 +74,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="387.5" height="48"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paint Defect Analysis Tool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6J-hY-Ufm">
                                                 <rect key="frame" x="0.0" y="48" width="387.5" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -126,7 +126,7 @@
                                                     </label>
                                                 </subviews>
                                                 <animations/>
-                                                <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.71764705882352942" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="67C-J2-SMv" firstAttribute="centerY" secondItem="sDP-Gn-b90" secondAttribute="centerY" id="7Mb-Kx-tZ5"/>
                                                     <constraint firstItem="67C-J2-SMv" firstAttribute="leading" secondItem="sDP-Gn-b90" secondAttribute="leading" id="CEQ-tS-Fh0"/>
@@ -267,16 +267,18 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTP-MU-CiT" userLabel="Start Input">
                                                         <rect key="frame" x="0.0" y="260" width="738" height="89.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y7-AT-m4H">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y7-AT-m4H">
                                                                 <rect key="frame" x="324" y="30" width="90" height="30"/>
                                                                 <animations/>
-                                                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.31372549019607843" green="0.67843137254901964" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="90" id="YtI-Ws-zgG"/>
                                                                     <constraint firstAttribute="height" constant="30" id="urg-I1-nK1"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <state key="normal" title="Start"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                <state key="normal" title="Start">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="15"/>
@@ -311,7 +313,7 @@
                                             </view>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.80392156862745101" green="0.81960784313725488" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="LY4-3v-W3J" secondAttribute="bottom" id="44x-6H-Z8Q"/>
                                             <constraint firstItem="sDP-Gn-b90" firstAttribute="leading" secondItem="Hfg-Tc-9ca" secondAttribute="leading" id="Bz3-1D-Msm"/>
@@ -363,7 +365,7 @@
                                                     </label>
                                                 </subviews>
                                                 <animations/>
-                                                <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.71764705882352942" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="ksG-Yd-8OD" firstAttribute="leading" secondItem="aQS-F6-z3D" secondAttribute="leading" id="3aA-x9-vue"/>
                                                     <constraint firstAttribute="trailing" secondItem="ksG-Yd-8OD" secondAttribute="trailing" id="G31-MS-Wn7"/>
@@ -393,7 +395,7 @@
                                             </view>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.80392156862745101" green="0.81960784313725488" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Fyq-5C-wjc" secondAttribute="bottom" id="4tu-BL-kUO"/>
                                             <constraint firstItem="Fyq-5C-wjc" firstAttribute="top" secondItem="aQS-F6-z3D" secondAttribute="bottom" id="9IA-fy-Zh4"/>
@@ -425,7 +427,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.38823529411764707" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2Ay-tn-b5H" firstAttribute="leading" secondItem="0yU-JR-1xW" secondAttribute="leading" id="0pY-FE-gNw"/>
                             <constraint firstItem="i6q-kY-Tck" firstAttribute="leading" secondItem="0yU-JR-1xW" secondAttribute="leading" id="6ey-sQ-IOe"/>
@@ -528,12 +530,13 @@
                                                                 <rect key="frame" x="5" y="5" width="72.5" height="20.5"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-za-k9N">
                                                                 <rect key="frame" x="82" y="0.0" width="51" height="31"/>
                                                                 <animations/>
+                                                                <color key="onTintColor" red="0.31372549019607843" green="0.67843137254901964" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <connections>
                                                                     <action selector="leftSwitchValueDidChange:" destination="vo7-dz-3eY" eventType="valueChanged" id="MhM-Pa-aTR"/>
                                                                 </connections>
@@ -562,7 +565,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1p-e5-hmc">
                                                         <rect key="frame" x="0.0" y="0.0" width="246" height="50"/>
                                                         <animations/>
-                                                        <state key="normal" title="Choose Model"/>
+                                                        <state key="normal" title="Choose Model">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="TJd-7e-sqr" kind="popoverPresentation" identifier="carModelPopover" popoverAnchorView="iSy-tX-wNG" id="S5E-ZT-SDH">
                                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -598,12 +603,13 @@
                                                                 <rect key="frame" x="5" y="5" width="83" height="20.5"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PXn-Og-Koo">
                                                                 <rect key="frame" x="93" y="0.0" width="51" height="31"/>
                                                                 <animations/>
+                                                                <color key="onTintColor" red="0.31372549019607843" green="0.67843137254901964" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <connections>
                                                                     <action selector="rightSwitchValueDidChange:" destination="vo7-dz-3eY" eventType="valueChanged" id="0lo-Mq-GoN"/>
                                                                 </connections>
@@ -645,7 +651,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.32156862745098042" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="fP8-Nd-I0d" firstAttribute="leading" secondItem="jkK-Wi-eIu" secondAttribute="leading" id="FXL-Na-g55"/>
                                     <constraint firstAttribute="trailing" secondItem="fP8-Nd-I0d" secondAttribute="trailing" id="LMI-aD-nEo"/>
@@ -841,7 +847,7 @@
                                                                             </label>
                                                                         </subviews>
                                                                         <animations/>
-                                                                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.80392156862745101" green="0.81960784313725488" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="bottom" secondItem="xRr-eq-HXG" secondAttribute="bottom" id="YjN-8c-tYk"/>
                                                                             <constraint firstAttribute="height" constant="25" id="aCO-9d-9Sx"/>
@@ -872,7 +878,7 @@
                                                                     </view>
                                                                 </subviews>
                                                                 <animations/>
-                                                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="T4t-jQ-Ea1" firstAttribute="top" secondItem="mL4-lP-ATc" secondAttribute="top" id="EAb-qE-Jod"/>
                                                                     <constraint firstAttribute="trailing" secondItem="T4t-jQ-Ea1" secondAttribute="trailing" id="Lt6-4J-QxH"/>
@@ -961,13 +967,15 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4B-6Q-Bgy">
                                                 <rect key="frame" x="309" y="35" width="120" height="30"/>
                                                 <animations/>
-                                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.31372549019607843" green="0.67843137254901964" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="eLG-fU-rew"/>
                                                     <constraint firstAttribute="width" constant="120" id="n8N-dy-565"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Mark Defect"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="Mark Defect">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
@@ -988,7 +996,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="eyy-z2-1Lu" firstAttribute="leading" secondItem="aAb-Yh-tAh" secondAttribute="leading" id="1IO-As-Dfe"/>
                                     <constraint firstItem="3V1-Rg-or7" firstAttribute="leading" secondItem="aAb-Yh-tAh" secondAttribute="leading" id="8lp-7O-uAm"/>
@@ -1024,7 +1032,7 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.71764705882352942" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Oxa-wb-z5f" secondAttribute="bottom" id="7IR-rj-Azg"/>
                                             <constraint firstAttribute="trailing" secondItem="Oxa-wb-z5f" secondAttribute="trailing" id="ER4-Dl-oFV"/>
@@ -1042,7 +1050,7 @@
                                     </containerView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZCA-QA-XMb" secondAttribute="bottom" id="CRJ-JU-A23"/>
                                     <constraint firstItem="ZCA-QA-XMb" firstAttribute="top" secondItem="yZZ-v7-HBC" secondAttribute="bottom" id="Mjz-xT-JLL"/>
@@ -1061,7 +1069,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.38823529411764707" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aZQ-Rp-0zX" firstAttribute="top" secondItem="GCL-m6-Kcu" secondAttribute="bottom" constant="15" id="6AQ-tb-vEH"/>
                             <constraint firstAttribute="trailing" secondItem="aAb-Yh-tAh" secondAttribute="trailing" constant="15" id="C9A-x9-TBs"/>
@@ -1297,7 +1305,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.38823529411764707" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="npq-QQ-suf" secondAttribute="trailing" constant="15" id="KSD-ZH-XrY"/>
                             <constraint firstItem="npq-QQ-suf" firstAttribute="top" secondItem="k3D-mg-6s5" secondAttribute="bottom" constant="15" id="SLZ-5N-8bq"/>
@@ -1337,6 +1345,7 @@
                         <outlet property="defectsInReportLabel" destination="iGJ-U1-HDa" id="PXp-UK-lSz"/>
                         <outlet property="defectsPerUnitLabel" destination="zaQ-kC-PUz" id="BFS-tq-8Zh"/>
                         <outlet property="saveButton" destination="hlc-tb-MsA" id="bpo-MS-EyI"/>
+                        <outlet property="spacerButton" destination="enD-fD-p9Y" id="Fii-Lb-CbH"/>
                         <outlet property="unitsInReportLabel" destination="rhG-wQ-foG" id="k0r-Ka-HYe"/>
                     </connections>
                 </viewController>
@@ -1352,7 +1361,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Jmr-pm-lae" userLabel="Header">
                             <rect key="frame" x="0.0" y="64" width="768" height="126"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1367,14 +1376,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-O6-Tfr">
                                                     <rect key="frame" x="384" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1387,14 +1396,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyst" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-HD-ZjK">
                                                     <rect key="frame" x="384" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1407,14 +1416,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmt-gS-J7c">
                                                     <rect key="frame" x="384" y="0.0" width="384" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1425,7 +1434,7 @@
                                 </stackView>
                             </subviews>
                             <animations/>
-                            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.043137254901960784" green="0.32156862745098042" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="WDU-JF-PHY" secondAttribute="trailing" id="QBe-k4-XxP"/>
                                 <constraint firstItem="WDU-JF-PHY" firstAttribute="top" secondItem="Jmr-pm-lae" secondAttribute="top" id="iAL-nm-wtw"/>
@@ -1466,6 +1475,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Analysis Samples" id="ZD8-Ph-H0F">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="jy3-HG-Zj4">
+                            <connections>
+                                <action selector="onBackButton:" destination="zSu-RN-CDm" id="TjG-7e-QRS"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="q5k-Dx-Jlf">
                                 <connections>
@@ -1527,7 +1541,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q73-LS-dDn">
                                             <rect key="frame" x="-10" y="-2" width="246" height="48"/>
                                             <animations/>
-                                            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Factory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrc-rV-2eU">
                                             <rect key="frame" x="88" y="13" width="50" height="17"/>
@@ -1611,7 +1625,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h74-Mr-FnB">
                                                     <rect key="frame" x="-10" y="-2" width="246" height="48"/>
                                                     <animations/>
-                                                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qa-fz-9CP">
                                                     <rect key="frame" x="97.5" y="13" width="31.5" height="17"/>
@@ -1738,7 +1752,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cie-pf-Fqj">
                                                     <rect key="frame" x="-10" y="-2" width="246" height="48"/>
                                                     <animations/>
-                                                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkpoint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEO-I9-xeY">
                                                     <rect key="frame" x="75" y="13" width="76" height="17"/>
@@ -1904,7 +1918,7 @@
         <image name="carTop" width="575" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Ba-TG-8FC"/>
         <segue reference="jtG-lo-9GD"/>
+        <segue reference="1Ba-TG-8FC"/>
     </inferredMetricsTieBreakers>
 </document>

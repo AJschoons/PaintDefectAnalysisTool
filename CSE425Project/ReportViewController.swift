@@ -11,6 +11,7 @@ import UIKit
 class ReportViewController: UIViewController {
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var spacerButton: UIBarButtonItem!
     
     @IBOutlet weak var carLeftView: UIView!
     @IBOutlet weak var carLeftImageView: UIImageView!
@@ -57,6 +58,10 @@ class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let barButtonBackgroundHidden = UIImage(named: "barButtonBackgroundHidden")
+        spacerButton.setBackgroundImage(barButtonBackgroundHidden, forState: UIControlState.Disabled, barMetrics: UIBarMetrics.Default)
+        spacerButton.enabled = false
         
         // add the defect mark views for each side as subviews
         carLeftView.addSubview(defectMarkViewLeft)

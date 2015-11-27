@@ -22,12 +22,32 @@ let filenameDateFormatter: NSDateFormatter = {
     return formatter
 }()
 
+let backgroundGray = UIColor(rgba: "#DBDDE0")
+let toolbarDarkBlue = UIColor(rgba: "#0B5292")
+let backgroundBlue = UIColor(rgba: "#0C63B2")
+let white = UIColor(rgba: "#FFFFFF")
+let text = UIColor(rgba: "#3C3C3C")
+let toolbarButtonBackground = UIColor(rgba: "#3374A8")
+let positiveButtonBackground = UIColor(rgba: "#50AD3B")
+let neutralButton = UIColor(rgba: "#878787")
+let backgroundGrayMid = UIColor(rgba: "#CDD1D4")
+let backgroundGrayDarker = UIColor(rgba: "#B7BDC1")
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
   var window: UIWindow?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    // customize appearences
+    UINavigationBar.appearance().barTintColor = toolbarDarkBlue
+    UINavigationBar.appearance().barStyle = .Black
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: white]
+    UIBarButtonItem.appearance().tintColor = white
+    let barButtonBackground = UIImage(named: "barButtonBackground")
+    UIBarButtonItem.appearance().setBackgroundImage(barButtonBackground, forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
+    
     return true
   }
 
