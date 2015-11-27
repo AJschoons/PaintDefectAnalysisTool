@@ -565,6 +565,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1p-e5-hmc">
                                                         <rect key="frame" x="0.0" y="0.0" width="246" height="50"/>
                                                         <animations/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Choose Model">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -847,7 +848,7 @@
                                                                             </label>
                                                                         </subviews>
                                                                         <animations/>
-                                                                        <color key="backgroundColor" red="0.80392156862745101" green="0.81960784313725488" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.71764707565307617" green="0.74117648601531982" blue="0.75686275959014893" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="bottom" secondItem="xRr-eq-HXG" secondAttribute="bottom" id="YjN-8c-tYk"/>
                                                                             <constraint firstAttribute="height" constant="25" id="aCO-9d-9Sx"/>

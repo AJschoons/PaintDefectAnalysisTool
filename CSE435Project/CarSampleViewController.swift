@@ -132,6 +132,7 @@ class CarSampleViewController: UIViewController {
         
         if isNewSample! {
             backBarButton.title = "Cancel"
+            updateChooseModelButton()
         } else {
             initializeUIWithSample()
             navigationItem.rightBarButtonItems = nil // don't show the "Done" button
@@ -166,7 +167,9 @@ class CarSampleViewController: UIViewController {
     
     private func updateChooseModelButton() {
         let buttonTitle = (selectedModelType != nil) ? selectedModelType!.name : "Choose Model"
+        let buttonTextColor = (selectedModelType != nil) ? white : UIColor.redColor()
         chooseModelButton.setTitle(buttonTitle, forState: UIControlState.Normal)
+        chooseModelButton.setTitleColor(buttonTextColor, forState: UIControlState.Normal)
     }
     
     private func markDefect() {
