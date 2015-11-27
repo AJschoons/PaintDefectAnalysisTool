@@ -1318,7 +1318,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title=" " id="enD-fD-p9Y" userLabel="Spacer"/>
-                            <barButtonItem title="Save to Disk" id="hlc-tb-MsA">
+                            <barButtonItem title="Save to Device" id="hlc-tb-MsA">
                                 <connections>
                                     <action selector="onSave:" destination="Hjh-Yr-8fz" id="eYL-GE-2yp"/>
                                 </connections>
@@ -1336,6 +1336,7 @@
                         <outlet property="carTopView" destination="9Qj-c0-GhW" id="qtz-Yt-pYa"/>
                         <outlet property="defectsInReportLabel" destination="iGJ-U1-HDa" id="PXp-UK-lSz"/>
                         <outlet property="defectsPerUnitLabel" destination="zaQ-kC-PUz" id="BFS-tq-8Zh"/>
+                        <outlet property="saveButton" destination="hlc-tb-MsA" id="bpo-MS-EyI"/>
                         <outlet property="unitsInReportLabel" destination="rhG-wQ-foG" id="k0r-Ka-HYe"/>
                     </connections>
                 </viewController>

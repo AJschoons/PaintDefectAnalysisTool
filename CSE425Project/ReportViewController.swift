@@ -10,6 +10,8 @@ import UIKit
 
 class ReportViewController: UIViewController {
 
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     @IBOutlet weak var carLeftView: UIView!
     @IBOutlet weak var carLeftImageView: UIImageView!
     let defectMarkViewLeft = DefectMarkView()
@@ -49,6 +51,8 @@ class ReportViewController: UIViewController {
         } catch {
             print("Couldn't save csv to disk")
         }
+        
+        saveButton.enabled = false
     }
     
     override func viewDidLoad() {
