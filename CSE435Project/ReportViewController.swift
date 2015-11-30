@@ -37,8 +37,14 @@ class ReportViewController: UIViewController {
     }
     
     @IBAction func onSendButton(sender: AnyObject) {
-        
+        let url = NSURL(string: "https://www.cse.msu.edu/~cse435/Projects/F2015/Groups/Team6/receive_data/receiveData.php")
+        let request = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: 60)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = "data=\(analysis.toCsvString())".dataUsingEncoding(NSUTF8StringEncoding)
+        let connection = NSURLConnection(request: request, delegate: nil)
+        connection!.start()
     }
+
     
     @IBAction func onSave(sender: AnyObject) {
         let documentDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0]

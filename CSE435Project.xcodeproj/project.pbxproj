@@ -73,7 +73,7 @@
 		814735AC1BF57AF000BF721C /* ShiftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTableViewController.swift; sourceTree = "<group>"; };
 		815700711BFEAF21004F9C86 /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		815700731BFECF37004F9C86 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
-		81D325981BF2647C001CCD1C /* CSE 435 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSE 435 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D325981BF2647C001CCD1C /* CSE435Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSE435Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3259B1BF2647C001CCD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3259E1BF2647C001CCD1C /* CSE435Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSE435Project.xcdatamodel; sourceTree = "<group>"; };
 		81D325A21BF2647C001CCD1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,10 +81,10 @@
 		81D325A71BF2647C001CCD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D325AA1BF2647C001CCD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D325AC1BF2647C001CCD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D325B11BF2647C001CCD1C /* CSE 435 Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSE 435 Project.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D325B11BF2647C001CCD1C /* CSE435Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE435Project.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D325B51BF2647C001CCD1C /* CSE435ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE435ProjectTests.swift; sourceTree = "<group>"; };
 		81D325B71BF2647C001CCD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D325BC1BF2647C001CCD1C /* CSE 435 Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSE 435 Project.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D325BC1BF2647C001CCD1C /* CSE435Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE435Project.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D325C01BF2647C001CCD1C /* CSE435ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE435ProjectUITests.swift; sourceTree = "<group>"; };
 		81D325C21BF2647C001CCD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,9 +195,9 @@
 		81D325991BF2647C001CCD1C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81D325981BF2647C001CCD1C /* CSE 435 Project.app */,
-				81D325B11BF2647C001CCD1C /* CSE 435 Project.xctest */,
-				81D325BC1BF2647C001CCD1C /* CSE 435 Project.xctest */,
+				81D325981BF2647C001CCD1C /* CSE435Project.app */,
+				81D325B11BF2647C001CCD1C /* CSE435Project.xctest */,
+				81D325BC1BF2647C001CCD1C /* CSE435Project.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81D325971BF2647C001CCD1C /* CSE 435 Project */ = {
+		81D325971BF2647C001CCD1C /* CSE435Project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81D325C51BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE 435 Project" */;
+			buildConfigurationList = 81D325C51BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE435Project" */;
 			buildPhases = (
 				81D325941BF2647C001CCD1C /* Sources */,
 				81D325951BF2647C001CCD1C /* Frameworks */,
@@ -259,14 +259,14 @@
 			);
 			dependencies = (
 			);
-			name = "CSE 435 Project";
+			name = CSE435Project;
 			productName = CSE425Project;
-			productReference = 81D325981BF2647C001CCD1C /* CSE 435 Project.app */;
+			productReference = 81D325981BF2647C001CCD1C /* CSE435Project.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81D325B01BF2647C001CCD1C /* CSE 435 ProjectTests */ = {
+		81D325B01BF2647C001CCD1C /* CSE435ProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81D325C81BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE 435 ProjectTests" */;
+			buildConfigurationList = 81D325C81BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE435ProjectTests" */;
 			buildPhases = (
 				81D325AD1BF2647C001CCD1C /* Sources */,
 				81D325AE1BF2647C001CCD1C /* Frameworks */,
@@ -277,14 +277,14 @@
 			dependencies = (
 				81D325B31BF2647C001CCD1C /* PBXTargetDependency */,
 			);
-			name = "CSE 435 ProjectTests";
+			name = CSE435ProjectTests;
 			productName = CSE425ProjectTests;
-			productReference = 81D325B11BF2647C001CCD1C /* CSE 435 Project.xctest */;
+			productReference = 81D325B11BF2647C001CCD1C /* CSE435Project.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		81D325BB1BF2647C001CCD1C /* CSE 435 ProjectUITests */ = {
+		81D325BB1BF2647C001CCD1C /* CSE435ProjectUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81D325CB1BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE 435 ProjectUITests" */;
+			buildConfigurationList = 81D325CB1BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE435ProjectUITests" */;
 			buildPhases = (
 				81D325B81BF2647C001CCD1C /* Sources */,
 				81D325B91BF2647C001CCD1C /* Frameworks */,
@@ -295,9 +295,9 @@
 			dependencies = (
 				81D325BE1BF2647C001CCD1C /* PBXTargetDependency */,
 			);
-			name = "CSE 435 ProjectUITests";
+			name = CSE435ProjectUITests;
 			productName = CSE425ProjectUITests;
-			productReference = 81D325BC1BF2647C001CCD1C /* CSE 435 Project.xctest */;
+			productReference = 81D325BC1BF2647C001CCD1C /* CSE435Project.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -323,7 +323,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81D325931BF2647C001CCD1C /* Build configuration list for PBXProject "CSE 435 Project" */;
+			buildConfigurationList = 81D325931BF2647C001CCD1C /* Build configuration list for PBXProject "CSE435Project" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -336,9 +336,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81D325971BF2647C001CCD1C /* CSE 435 Project */,
-				81D325B01BF2647C001CCD1C /* CSE 435 ProjectTests */,
-				81D325BB1BF2647C001CCD1C /* CSE 435 ProjectUITests */,
+				81D325971BF2647C001CCD1C /* CSE435Project */,
+				81D325B01BF2647C001CCD1C /* CSE435ProjectTests */,
+				81D325BB1BF2647C001CCD1C /* CSE435ProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -421,12 +421,12 @@
 /* Begin PBXTargetDependency section */
 		81D325B31BF2647C001CCD1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81D325971BF2647C001CCD1C /* CSE 435 Project */;
+			target = 81D325971BF2647C001CCD1C /* CSE435Project */;
 			targetProxy = 81D325B21BF2647C001CCD1C /* PBXContainerItemProxy */;
 		};
 		81D325BE1BF2647C001CCD1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81D325971BF2647C001CCD1C /* CSE 435 Project */;
+			target = 81D325971BF2647C001CCD1C /* CSE435Project */;
 			targetProxy = 81D325BD1BF2647C001CCD1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -543,7 +543,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE435Project;
-				PRODUCT_NAME = "CSE 435 Project";
+				PRODUCT_NAME = CSE435Project;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -557,7 +557,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE435Project;
-				PRODUCT_NAME = "CSE 435 Project";
+				PRODUCT_NAME = CSE435Project;
 			};
 			name = Release;
 		};
@@ -568,8 +568,8 @@
 				INFOPLIST_FILE = CSE435ProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE435ProjectTests;
-				PRODUCT_NAME = "CSE 435 Project";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSE 435 Project.app/CSE 435 Project";
+				PRODUCT_NAME = CSE435Project;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSE435Project.app/CSE435Project";
 			};
 			name = Debug;
 		};
@@ -580,8 +580,8 @@
 				INFOPLIST_FILE = CSE435ProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE435ProjectTests;
-				PRODUCT_NAME = "CSE 435 Project";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSE 435 Project.app/CSE 435 Project";
+				PRODUCT_NAME = CSE435Project;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSE435Project.app/CSE435Project";
 			};
 			name = Release;
 		};
@@ -591,7 +591,7 @@
 				INFOPLIST_FILE = CSE435ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE435ProjectUITests;
-				PRODUCT_NAME = "CSE 435 Project";
+				PRODUCT_NAME = CSE435Project;
 				TEST_TARGET_NAME = CSE435Project;
 				USES_XCTRUNNER = YES;
 			};
@@ -603,7 +603,7 @@
 				INFOPLIST_FILE = CSE435ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamschoonmaker.CSE435ProjectUITests;
-				PRODUCT_NAME = "CSE 435 Project";
+				PRODUCT_NAME = CSE435Project;
 				TEST_TARGET_NAME = CSE435Project;
 				USES_XCTRUNNER = YES;
 			};
@@ -612,7 +612,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81D325931BF2647C001CCD1C /* Build configuration list for PBXProject "CSE 435 Project" */ = {
+		81D325931BF2647C001CCD1C /* Build configuration list for PBXProject "CSE435Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81D325C31BF2647C001CCD1C /* Debug */,
@@ -621,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81D325C51BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE 435 Project" */ = {
+		81D325C51BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE435Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81D325C61BF2647C001CCD1C /* Debug */,
@@ -630,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81D325C81BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE 435 ProjectTests" */ = {
+		81D325C81BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE435ProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81D325C91BF2647C001CCD1C /* Debug */,
@@ -639,7 +639,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81D325CB1BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE 435 ProjectUITests" */ = {
+		81D325CB1BF2647C001CCD1C /* Build configuration list for PBXNativeTarget "CSE435ProjectUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81D325CC1BF2647C001CCD1C /* Debug */,

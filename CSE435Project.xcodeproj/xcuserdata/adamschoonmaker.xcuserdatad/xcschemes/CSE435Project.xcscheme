@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325971BF2647C001CCD1C"
                BuildableName = "CSE 435 Project.app"
-               BlueprintName = "CSE 435 Project"
-               ReferencedContainer = "container:CSE 435 Project.xcodeproj">
+               BlueprintName = "CSE435Project"
+               ReferencedContainer = "container:CSE435Project.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325B01BF2647C001CCD1C"
-               BuildableName = "CSE 435 Project.xctest"
-               BlueprintName = "CSE 435 ProjectTests"
-               ReferencedContainer = "container:CSE 435 Project.xcodeproj">
+               BuildableName = "CSE435Project.xctest"
+               BlueprintName = "CSE435ProjectTests"
+               ReferencedContainer = "container:CSE435Project.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325BB1BF2647C001CCD1C"
-               BuildableName = "CSE 435 Project.xctest"
-               BlueprintName = "CSE 435 ProjectUITests"
-               ReferencedContainer = "container:CSE 435 Project.xcodeproj">
+               BuildableName = "CSE435Project.xctest"
+               BlueprintName = "CSE435ProjectUITests"
+               ReferencedContainer = "container:CSE435Project.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,8 +54,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
             BuildableName = "CSE 435 Project.app"
-            BlueprintName = "CSE 435 Project"
-            ReferencedContainer = "container:CSE 435 Project.xcodeproj">
+            BlueprintName = "CSE435Project"
+            ReferencedContainer = "container:CSE435Project.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
             BuildableName = "CSE 435 Project.app"
-            BlueprintName = "CSE 435 Project"
-            ReferencedContainer = "container:CSE 435 Project.xcodeproj">
+            BlueprintName = "CSE435Project"
+            ReferencedContainer = "container:CSE435Project.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,8 +96,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
             BuildableName = "CSE 435 Project.app"
-            BlueprintName = "CSE 435 Project"
-            ReferencedContainer = "container:CSE 435 Project.xcodeproj">
+            BlueprintName = "CSE435Project"
+            ReferencedContainer = "container:CSE435Project.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

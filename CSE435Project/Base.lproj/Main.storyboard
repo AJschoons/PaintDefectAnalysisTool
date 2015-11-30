@@ -10,7 +10,7 @@
         <!--Previous Analysis Table View Controller-->
         <scene sceneID="P4Q-QO-yZR">
             <objects>
-                <tableViewController id="Etb-MX-z5k" customClass="PreviousAnalysisTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Etb-MX-z5k" customClass="PreviousAnalysisTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vks-eH-gfU">
                         <rect key="frame" x="0.0" y="0.0" width="738" height="334.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
         <!--Home-->
         <scene sceneID="Qeo-R0-xPO">
             <objects>
-                <viewController title="Home" id="4I9-on-Gvh" customClass="HomeViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="4I9-on-Gvh" customClass="HomeViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SDw-TX-tJI"/>
                         <viewControllerLayoutGuide type="bottom" id="ZbR-g8-ED7"/>
@@ -457,7 +457,7 @@
         <!--Car Model Table View Controller-->
         <scene sceneID="VTN-wk-HkF">
             <objects>
-                <tableViewController id="TJd-7e-sqr" customClass="CarModelTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TJd-7e-sqr" customClass="CarModelTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oV4-SN-p6C">
                         <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -505,7 +505,7 @@
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
             <objects>
-                <viewController id="vo7-dz-3eY" customClass="CarSampleViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vo7-dz-3eY" customClass="CarSampleViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yy8-fy-mpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="aZQ-Rp-0zX"/>
@@ -765,7 +765,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="Uyh-mg-Lc9" secondAttribute="bottom" id="yaO-u1-99Z"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-H2-8q7" userLabel="Defect Marking" customClass="DefectMarkDrawingView" customModule="CSE_435_Project" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-H2-8q7" userLabel="Defect Marking" customClass="DefectMarkDrawingView" customModule="CSE435Project" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="738" height="320"/>
                                                                 <animations/>
                                                             </view>
@@ -1119,7 +1119,7 @@
         <!--Marked Defects Table View Controller-->
         <scene sceneID="Jxf-Q1-Utz">
             <objects>
-                <tableViewController id="jEI-BO-IFQ" customClass="MarkedDefectsTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jEI-BO-IFQ" customClass="MarkedDefectsTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3uk-wm-CAq">
                         <rect key="frame" x="0.0" y="0.0" width="738" height="141"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1160,7 +1160,7 @@
         <!--Report-->
         <scene sceneID="pBx-ur-gke">
             <objects>
-                <viewController id="Hjh-Yr-8fz" customClass="ReportViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hjh-Yr-8fz" customClass="ReportViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k3D-mg-6s5"/>
                         <viewControllerLayoutGuide type="bottom" id="aEt-pG-jHB"/>
@@ -1357,7 +1357,7 @@
         <!--Analysis Samples-->
         <scene sceneID="Tvi-Y7-ih8">
             <objects>
-                <tableViewController id="zSu-RN-CDm" customClass="AnalysisSamplesTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zSu-RN-CDm" customClass="AnalysisSamplesTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1iR-ut-UBo">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1524,7 +1524,7 @@
         <!--Factory Table View Controller-->
         <scene sceneID="Hx5-xr-2mW">
             <objects>
-                <tableViewController id="Kh8-mS-wsf" customClass="FactoryTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Kh8-mS-wsf" customClass="FactoryTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b5g-VH-mv2">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1606,7 +1606,7 @@
         <!--Shift Table View Controller-->
         <scene sceneID="zKt-My-6LZ">
             <objects>
-                <tableViewController id="5UX-QT-rOc" customClass="ShiftTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5UX-QT-rOc" customClass="ShiftTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="goS-bL-xdO">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1733,7 +1733,7 @@
         <!--Checkpoint Table View Controller-->
         <scene sceneID="ket-5c-xIr">
             <objects>
-                <tableViewController id="RQp-FF-yCh" customClass="CheckpointTableViewController" customModule="CSE_435_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RQp-FF-yCh" customClass="CheckpointTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nUT-y2-dqW">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
