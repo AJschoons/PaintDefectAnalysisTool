@@ -21,13 +21,35 @@ enum Shift: String {
     case Morning, Afternoon, Evening
 }
 
+enum FactoryLocation: Int16 {
+    case LansingDeltaTownship = 1, LansingGrandRiver, LakeOrion
+}
+
 class Factory: NSManagedObject {
     static let entityDescriptionName = "Factory"
     
-    @NSManaged var id: Int16
+    @NSManaged private var location: Int16
     @NSManaged var name: String
     
     @NSManaged var analyses: NSSet
+    
+    // The models this factory has
+    @NSManaged private var models: NSOrderedSet
+    
+    func getLocation() -> FactoryLocation {
+        return FactoryLocation(rawValue: location)!
+    }
+    
+    // Get the models this factory has
+    func getModels() -> [ModelType] {
+        return models.array as! [ModelType]
+    }
+    
+    func addModel(model: ModelType) {
+        let mutableModels = models.mutableCopy() as! NSMutableOrderedSet
+        mutableModels.addObject(model)
+        models = mutableModels.copy() as! NSOrderedSet
+    }
     
     class func fetchFactories() -> [Factory] {
         let context = CoreDataStack.sharedStack.managedObjectContext
@@ -60,18 +82,21 @@ class Factory: NSManagedObject {
         var factory = NSEntityDescription.insertNewObjectForEntityForName(Factory.entityDescriptionName, inManagedObjectContext: context) as! Factory
         
         // Factory 1
-        factory.name = "Lansing West"
-        factory.id = 0
+        factory.name = "Lansing Delta Township"
+        factory.location = FactoryLocation.LansingDeltaTownship.rawValue
+        ModelType.initializeModelTypesForFactory(factory)
         
         // Factory 2
         factory = NSEntityDescription.insertNewObjectForEntityForName(Factory.entityDescriptionName, inManagedObjectContext: context) as! Factory
-        factory.name = "Lansing Oldtown"
-        factory.id = 1
+        factory.name = "Lansing Grand River"
+        factory.location = FactoryLocation.LansingGrandRiver.rawValue
+        ModelType.initializeModelTypesForFactory(factory)
         
         // Factory 3
         factory = NSEntityDescription.insertNewObjectForEntityForName(Factory.entityDescriptionName, inManagedObjectContext: context) as! Factory
-        factory.name = "Delta Township"
-        factory.id = 2
+        factory.name = "Lake Orion"
+        factory.location = FactoryLocation.LakeOrion.rawValue
+        ModelType.initializeModelTypesForFactory(factory)
         
         CoreDataStack.sharedStack.saveContext()
     }

@@ -13,42 +13,29 @@ class ModelType: NSManagedObject {
 
     static let entityDescriptionName = "ModelType"
     
-    @NSManaged var name: String
+    @NSManaged private(set) var name: String
     
-    class func fetchModelTypes() -> [ModelType] {
+    class func initializeModelTypesForFactory(factory: Factory) {
         let context = CoreDataStack.sharedStack.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: ModelType.entityDescriptionName)
         
-        // order alphabetically
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        
-        var modelTypes = [ModelType]()
-        do {
-            modelTypes = try context.executeFetchRequest(fetchRequest) as! [ModelType]
-            
-            // Is this the first time the program is being run?
-            // If so, initialize the ModelTypes
-            if modelTypes.count == 0 {
-                initializeModelTypes()
-                modelTypes = try context.executeFetchRequest(fetchRequest) as! [ModelType]
-            }
-        } catch {
-            print("Couldn't load ModelTypes")
+        var modelTypeNames = [String]()
+        switch factory.getLocation() {
+        case .LakeOrion:
+            modelTypeNames = ["Chevrolet Sonic 4 door", "Chevrolet Sonic 5 door", "Buick Verano"]
+        case .LansingDeltaTownship:
+            modelTypeNames = ["Chevrolet Traverse", "Buick Enclave", "GMC Acadia"]
+        case .LansingGrandRiver:
+            modelTypeNames = ["Cadillac ATS", "Cadillac CTS 4 door", "Cadillac CTS Coupe", "Chevrolet Camaro"]
         }
         
-        return modelTypes
-    }
-    
-    private class func initializeModelTypes() {
-        let context = CoreDataStack.sharedStack.managedObjectContext
-        
-        let modelTypeNames = ["Chrysler 200", "Chrysler 300", "Chrysler T&C", "Dodge Grand Caravan", "Dodge Challenger", "Dodge Charger", "Dodge Viper", "Dodge Durango", "Dodge Dart", "Dodge Journey", "Jeep Wrangler", "Jeep Patroit"]
+        modelTypeNames.sortInPlace()
         
         // Use this variable to create the ModelTypes
         var modelType: ModelType
         for modelTypeName in modelTypeNames {
             modelType = NSEntityDescription.insertNewObjectForEntityForName(ModelType.entityDescriptionName, inManagedObjectContext: context) as! ModelType
             modelType.name = modelTypeName
+            factory.addModel(modelType)
         }
         
         CoreDataStack.sharedStack.saveContext()

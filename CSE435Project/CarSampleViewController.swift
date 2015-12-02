@@ -206,6 +206,7 @@ class CarSampleViewController: UIViewController {
         if identifier == "carModelPopover" {
             guard let destination = segue.destinationViewController as? CarModelTableViewController else { return }
             destination.delegate = self
+            destination.modelTypes = analysis.factory.getModels()
         } else if identifier == "markedDefectsEmbed" {
             guard let destination = segue.destinationViewController as? MarkedDefectsTableViewController else { return }
             markedDefectsTableViewController = destination

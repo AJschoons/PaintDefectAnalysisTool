@@ -459,20 +459,20 @@
             <objects>
                 <tableViewController id="TJd-7e-sqr" customClass="CarModelTableViewController" customModule="CSE435Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oV4-SN-p6C">
-                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="carModel" textLabel="dl0-RE-SmG" style="IBUITableViewCellStyleDefault" id="cKx-5V-V1L">
-                                <rect key="frame" x="0.0" y="28" width="175" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="200" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cKx-5V-V1L" id="jn6-En-lv1">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Car Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dl0-RE-SmG">
-                                            <rect key="frame" x="15" y="0.0" width="145" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="170" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -491,16 +491,16 @@
                         </connections>
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="175" height="175"/>
+                    <size key="freeformSize" width="200" height="132"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="size" keyPath="popoverSize">
-                            <size key="value" width="175" height="175"/>
+                            <size key="value" width="200" height="132"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey1-ZK-bkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5098.5" y="183.5"/>
+            <point key="canvasLocation" x="4128" y="219"/>
         </scene>
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
@@ -576,11 +576,11 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSy-tX-wNG" userLabel="Choose Model Popover Anchor">
-                                                        <rect key="frame" x="113" y="49" width="20" height="1"/>
+                                                        <rect key="frame" x="122" y="49" width="2" height="1"/>
                                                         <animations/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="D0D-0M-dzL"/>
-                                                            <constraint firstAttribute="width" constant="20" id="IlO-aJ-MwY"/>
+                                                            <constraint firstAttribute="width" constant="2" id="IlO-aJ-MwY"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>

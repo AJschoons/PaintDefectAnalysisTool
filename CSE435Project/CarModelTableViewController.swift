@@ -25,13 +25,7 @@ class CarModelTableViewController: UITableViewController {
     
     weak var delegate: CarModelTableViewControllerDelegate?
     
-    private var modelTypes = [ModelType]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        modelTypes = ModelType.fetchModelTypes()
-    }
+    var modelTypes = [ModelType]()
 }
 
 extension CarModelTableViewController {

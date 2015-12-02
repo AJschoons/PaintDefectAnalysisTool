@@ -28,9 +28,10 @@
         <relationship name="defects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Defect" inverseName="type" inverseEntity="Defect" syncable="YES"/>
     </entity>
     <entity name="Factory" representedClassName=".Factory" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="analyses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Analysis" inverseName="factory" inverseEntity="Analysis" syncable="YES"/>
+        <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ModelType" syncable="YES"/>
     </entity>
     <entity name="ModelType" representedClassName=".ModelType" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -45,7 +46,7 @@
         <element name="Analysis" positionX="261" positionY="189" width="128" height="150"/>
         <element name="Defect" positionX="279" positionY="243" width="128" height="165"/>
         <element name="DefectType" positionX="270" positionY="234" width="128" height="90"/>
-        <element name="Factory" positionX="261" positionY="225" width="128" height="90"/>
+        <element name="Factory" positionX="261" positionY="225" width="128" height="105"/>
         <element name="ModelType" positionX="288" positionY="252" width="128" height="60"/>
         <element name="Sample" positionX="279" positionY="243" width="128" height="105"/>
     </elements>
