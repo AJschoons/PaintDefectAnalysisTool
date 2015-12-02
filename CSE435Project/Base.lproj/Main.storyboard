@@ -500,7 +500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey1-ZK-bkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4128" y="219"/>
+            <point key="canvasLocation" x="4128" y="237"/>
         </scene>
         <!--Automotive Sample-->
         <scene sceneID="ZTO-Qq-pl0">
@@ -1304,14 +1304,75 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-sV-2OE" userLabel="Sending">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <subviews>
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-eJ-FyP" userLabel="Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO2-FX-gvc" userLabel="Popup">
+                                        <rect key="frame" x="284" y="442" width="200" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uploading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-23-nNS">
+                                                <rect key="frame" x="0.0" y="15" width="200" height="21"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="8A9-Qc-kIY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-fq-Oq2">
+                                                <rect key="frame" x="90" y="41" width="20" height="20"/>
+                                                <animations/>
+                                                <color key="color" red="0.047058824449777603" green="0.38823530077934265" blue="0.69803923368453979" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Tld-23-nNS" secondAttribute="trailing" id="7KE-8d-eom"/>
+                                            <constraint firstAttribute="width" constant="200" id="QK5-rq-e20"/>
+                                            <constraint firstItem="Tld-23-nNS" firstAttribute="leading" secondItem="JO2-FX-gvc" secondAttribute="leading" id="UQP-Vo-fxT"/>
+                                            <constraint firstItem="Tld-23-nNS" firstAttribute="top" secondItem="JO2-FX-gvc" secondAttribute="top" constant="15" id="aTA-rJ-U1o"/>
+                                            <constraint firstItem="BQH-fq-Oq2" firstAttribute="centerX" secondItem="JO2-FX-gvc" secondAttribute="centerX" id="bJa-C3-THD"/>
+                                            <constraint firstAttribute="bottom" secondItem="BQH-fq-Oq2" secondAttribute="bottom" constant="15" id="hP5-aX-4tR"/>
+                                            <constraint firstItem="BQH-fq-Oq2" firstAttribute="top" secondItem="Tld-23-nNS" secondAttribute="bottom" constant="5" id="peS-jn-uqL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LRE-eJ-FyP" secondAttribute="trailing" id="4ND-R7-9kW"/>
+                                    <constraint firstItem="JO2-FX-gvc" firstAttribute="centerY" secondItem="Ynm-sV-2OE" secondAttribute="centerY" id="Wfa-Ke-bfK"/>
+                                    <constraint firstItem="LRE-eJ-FyP" firstAttribute="leading" secondItem="Ynm-sV-2OE" secondAttribute="leading" id="cbv-L4-k6I"/>
+                                    <constraint firstAttribute="bottom" secondItem="LRE-eJ-FyP" secondAttribute="bottom" id="nsJ-mg-h3R"/>
+                                    <constraint firstItem="LRE-eJ-FyP" firstAttribute="top" secondItem="Ynm-sV-2OE" secondAttribute="top" id="qdB-lq-xMT"/>
+                                    <constraint firstItem="JO2-FX-gvc" firstAttribute="centerX" secondItem="Ynm-sV-2OE" secondAttribute="centerX" id="tDa-ya-euZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.047058823529411764" green="0.38823529411764707" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ynm-sV-2OE" firstAttribute="leading" secondItem="XQS-R4-0rN" secondAttribute="leading" id="0eR-wE-mZu"/>
+                            <constraint firstItem="aEt-pG-jHB" firstAttribute="top" secondItem="Ynm-sV-2OE" secondAttribute="bottom" id="Jaw-0d-Wg0"/>
                             <constraint firstAttribute="trailing" secondItem="npq-QQ-suf" secondAttribute="trailing" constant="15" id="KSD-ZH-XrY"/>
                             <constraint firstItem="npq-QQ-suf" firstAttribute="top" secondItem="k3D-mg-6s5" secondAttribute="bottom" constant="15" id="SLZ-5N-8bq"/>
                             <constraint firstItem="npq-QQ-suf" firstAttribute="leading" secondItem="XQS-R4-0rN" secondAttribute="leading" constant="15" id="clu-Ha-ukS"/>
                             <constraint firstItem="aEt-pG-jHB" firstAttribute="top" secondItem="npq-QQ-suf" secondAttribute="bottom" constant="15" id="mpP-7a-gvN"/>
+                            <constraint firstAttribute="trailing" secondItem="Ynm-sV-2OE" secondAttribute="trailing" id="vFk-pm-2i7"/>
+                            <constraint firstItem="Ynm-sV-2OE" firstAttribute="top" secondItem="k3D-mg-6s5" secondAttribute="bottom" id="zBW-Oo-4rV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Report" id="dCE-QT-4zy">
@@ -1346,6 +1407,9 @@
                         <outlet property="defectsInReportLabel" destination="iGJ-U1-HDa" id="PXp-UK-lSz"/>
                         <outlet property="defectsPerUnitLabel" destination="zaQ-kC-PUz" id="BFS-tq-8Zh"/>
                         <outlet property="saveButton" destination="hlc-tb-MsA" id="bpo-MS-EyI"/>
+                        <outlet property="sendButton" destination="09V-Ej-l18" id="ya1-fM-IcW"/>
+                        <outlet property="sendingOverlay" destination="LRE-eJ-FyP" id="W9R-5G-sjK"/>
+                        <outlet property="sendingPopup" destination="JO2-FX-gvc" id="FNo-bv-vBF"/>
                         <outlet property="spacerButton" destination="enD-fD-p9Y" id="Fii-Lb-CbH"/>
                         <outlet property="unitsInReportLabel" destination="rhG-wQ-foG" id="k0r-Ka-HYe"/>
                     </connections>

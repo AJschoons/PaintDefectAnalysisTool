@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-               BuildableName = "CSE 435 Project.app"
+               BuildableName = "CSE435Project.app"
                BlueprintName = "CSE435Project"
                ReferencedContainer = "container:CSE435Project.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-            BuildableName = "CSE 435 Project.app"
+            BuildableName = "CSE435Project.app"
             BlueprintName = "CSE435Project"
             ReferencedContainer = "container:CSE435Project.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-            BuildableName = "CSE 435 Project.app"
+            BuildableName = "CSE435Project.app"
             BlueprintName = "CSE435Project"
             ReferencedContainer = "container:CSE435Project.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81D325971BF2647C001CCD1C"
-            BuildableName = "CSE 435 Project.app"
+            BuildableName = "CSE435Project.app"
             BlueprintName = "CSE435Project"
             ReferencedContainer = "container:CSE435Project.xcodeproj">
          </BuildableReference>
