@@ -2,7 +2,11 @@
 
 Prototype paint defect analysis tracking iPad app for Chrysler paint factories.
 
-This prototype iPad app was created by Adam Schoonmaker as a term project for CSE 435 at Michigan State University. The purpose of the app is to help analysts in Chrysler paint factories record paint defects on cars as the cars travel down the line. This data is persisted in CoreData, and then uploaded to a dummy server. The idea of this is then the managers would be able to analylize their data over time and see patterns. Design was inspired by Trello.
+This prototype iPad app was created by Adam Schoonmaker as an honors project for the Software Engineering class at Michigan State University. 
+
+The Software Requirements Specification (SRS) document is available at: https://docs.google.com/document/d/1oIEHISnUyuN7o1JpHrvpYwQjRIB1NrGQvcxDd0VfNGI/edit?usp=sharing
+
+The purpose of the app is to help analysts in Chrysler paint factories record paint defects on cars as the cars travel down the line. This data is persisted in CoreData, and then uploaded to a dummy server. The idea of this is then the managers would be able to analylize their data over time and see patterns. Design was inspired by Trello.
 
 Tour of the app is below:
 
