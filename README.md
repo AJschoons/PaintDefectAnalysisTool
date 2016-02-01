@@ -1,3 +1,3 @@
-# CSE435Project
+# Paint Defect Analysis Tool
 
-Prototype paint defect analysis tracking tool for Chrysler paint factories
+Prototype paint defect analysis tracking iPad app for Chrysler paint factories
