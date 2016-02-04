@@ -1,12 +1,10 @@
 # Paint Defect Analysis Tool
 
-Prototype paint defect analysis tracking iPad app for Chrysler paint factories.
+Prototype iPad app for paint defect analysis tracking at Chrysler paint factories.
 
-This prototype iPad app was created by Adam Schoonmaker as an honors project for the Software Engineering class at Michigan State University. 
+I created this prototype app as an honors project for my Software Engineering class at Michigan State University. The Software Requirements Specification (SRS) document (https://docs.google.com/document/d/1oIEHISnUyuN7o1JpHrvpYwQjRIB1NrGQvcxDd0VfNGI/edit?usp=sharing) was created by my team members and I.
 
-The Software Requirements Specification (SRS) document is available at: https://docs.google.com/document/d/1oIEHISnUyuN7o1JpHrvpYwQjRIB1NrGQvcxDd0VfNGI/edit?usp=sharing
-
-The purpose of the app is to help analysts in Chrysler paint factories record paint defects on cars as the cars travel down the line. This data is persisted in CoreData, and then uploaded to a dummy server. The idea of this is then the managers would be able to analylize their data over time and see patterns. Design was inspired by Trello.
+The purpose of the app is to help analysts in Chrysler paint factories record paint defects on cars as they travel down the line. This data is persisted in CoreData, and then uploaded to a dummy server. The idea of this is managers would be able to analylize their data over time and see patterns, instead of relying on paper and clipboards. Design was inspired by Trello.
 
 Tour of the app is below:
 
